@@ -101,6 +101,22 @@ export function productSchema() {
     offers: [
       {
         "@type": "Offer",
+        name: "Managed",
+        price: "29",
+        priceCurrency: "EUR",
+        priceSpecification: {
+          "@type": "UnitPriceSpecification",
+          price: "29",
+          priceCurrency: "EUR",
+          unitText: "MON",
+          billingDuration: 1,
+          billingIncrement: 1,
+        },
+        availability: "https://schema.org/InStock",
+        url: canonical("/#pricing"),
+      },
+      {
+        "@type": "Offer",
         name: "Hardware Bundle (Plug & Play)",
         price: "799",
         priceCurrency: "EUR",
@@ -109,7 +125,7 @@ export function productSchema() {
       },
       {
         "@type": "Offer",
-        name: "Software Business",
+        name: "Business",
         price: "499",
         priceCurrency: "EUR",
         priceSpecification: {
@@ -148,7 +164,11 @@ export const FAQ: { q: string; a: string }[] = [
   },
   {
     q: "Was kostet RadiusOne?",
-    a: "Das Hardware-Bundle kostet 799 € einmalig (Router und Access Point vorinstalliert). Die Software Business kostet 499 € pro Jahr und enthält Updates, Premium-Support aus Deutschland und die Mobile-App-Steuerung.",
+    a: "Es gibt drei Editionen: Managed für 29 € pro Monat (vollständig gehostet, kein eigener Server nötig), Business für 499 € pro Jahr (Updates, Premium-Support aus DE, Mobile-App, DSGVO-Logbuch) und das Hardware-Bundle für 799 € einmalig (Router und Access Point vorinstalliert).",
+  },
+  {
+    q: "Läuft RadiusOne in der Cloud?",
+    a: "Auf Wunsch nicht: RadiusOne läuft On-Premise in Ihrem eigenen Netz, ohne Cloud-Zwang und ohne dass Nutzerdaten an Drittanbieter fließen. Die Technik basiert auf offenen Standards (FreeRADIUS, WPA3-Enterprise). Wer keinen eigenen Server betreiben möchte, kann alternativ die gehostete Managed-Edition nutzen.",
   },
   {
     q: "Für wen ist RadiusOne geeignet?",

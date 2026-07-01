@@ -12,11 +12,15 @@
 - Automatische Protokollierung (Nachweis: wer war wann in welchem Netzbereich) als
   Beitrag zur DSGVO-Konformität.
 - Einrichtung in ca. 30 Minuten ohne IT-Kenntnisse, Verwaltung per Mobile-App.
+- On-Premise im eigenen Netz, kein Cloud-Zwang, keine Nutzerdaten bei Dritten;
+  basiert auf offenen Standards (FreeRADIUS, WPA3-Enterprise). Rund 80 % der
+  Enterprise-Funktionen für unter 600 € statt ab 5.000 € (Cisco ISE / Aruba ClearPass).
 
 ## Preise
 
+- Managed: 29 € / Monat (vollständig gehostet, kein eigener Server nötig).
+- Business: 499 € / Jahr (Updates, Premium-Support aus DE, Mobile-App, DSGVO-Logbuch).
 - Hardware Bundle (Plug & Play): 799 € einmalig (Router + Access Point vorinstalliert).
-- Software Business: 499 € / Jahr (Updates, Premium-Support aus DE, Mobile-App).
 
 ## Seiten
 

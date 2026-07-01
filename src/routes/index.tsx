@@ -13,6 +13,9 @@ import {
   AlertTriangle,
   ArrowRight,
   Calendar,
+  Server,
+  CloudOff,
+  Scale,
 } from "lucide-react";
 import heroImg from "@/assets/hero-router.jpg";
 import appImg from "@/assets/app-mockup.jpg";
@@ -56,6 +59,7 @@ function LandingPage() {
         <Problem />
         <HowItWorks />
         <AppShowcase />
+        <Sovereignty />
         <Pricing />
         <Faq />
         <FinalCTA />
@@ -326,6 +330,70 @@ function AppShowcase() {
   );
 }
 
+function Sovereignty() {
+  const points = [
+    {
+      icon: Server,
+      title: "On-Premise statt Cloud",
+      desc: "Alles läuft auf Ihrer eigenen Hardware in Ihrem Netz – keine Abhängigkeit von externen Rechenzentren.",
+    },
+    {
+      icon: CloudOff,
+      title: "Keine Daten bei Dritten",
+      desc: "Zugangs- und Nutzungsdaten verlassen Ihr Netzwerk nicht – ein echter Vorteil für den Datenschutz.",
+    },
+    {
+      icon: Scale,
+      title: "Offene Standards",
+      desc: "Aufgebaut auf FreeRADIUS und WPA3-Enterprise – bewährte, herstellerunabhängige Technik ohne Lock-in.",
+    },
+  ];
+  return (
+    <section id="souveraenitaet" className="py-24">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="max-w-3xl">
+          <span className="text-xs font-semibold uppercase tracking-[0.14em] text-accent-foreground/80">
+            Souveränität
+          </span>
+          <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-primary md:text-5xl">
+            Ihre Daten bleiben bei Ihnen.
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            RadiusOne läuft On-Premise in Ihrem eigenen Netz – kein Cloud-Zwang, keine Nutzerdaten
+            bei Drittanbietern.
+          </p>
+        </div>
+
+        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+          {points.map(({ icon: Icon, title, desc }) => (
+            <div
+              key={title}
+              className="rounded-2xl border border-border bg-surface p-7 shadow-soft"
+            >
+              <div className="grid h-12 w-12 place-items-center rounded-xl bg-primary-soft text-primary">
+                <Icon className="h-6 w-6" strokeWidth={1.75} />
+              </div>
+              <h3 className="mt-5 font-display text-xl font-bold text-foreground">{title}</h3>
+              <p className="mt-2 text-muted-foreground">{desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 flex max-w-3xl items-start gap-4 rounded-2xl border border-primary/20 bg-primary-soft/40 p-5">
+          <div className="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-primary/10 text-primary">
+            <ShieldCheck className="h-5 w-5" />
+          </div>
+          <p className="text-sm leading-relaxed text-foreground">
+            <strong className="font-semibold">Enterprise-Sicherheit zum KMU-Preis:</strong> rund 80
+            % der Enterprise-Funktionen für <strong className="text-primary">unter 600 €</strong> –
+            statt <strong>ab 5.000 €</strong> bei Cisco ISE oder Aruba ClearPass.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Pricing() {
   return (
     <section id="pricing" className="bg-secondary/40 py-24">
@@ -339,7 +407,32 @@ function Pricing() {
           </h2>
         </div>
 
-        <div className="mx-auto mt-14 grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="mx-auto mt-14 grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-3">
+          <PriceCard
+            title="Managed"
+            tag="Gehostet"
+            price="29 €"
+            unit="/ Monat"
+            features={[
+              "Kein eigener Server nötig",
+              "Vollständig gehostet & gewartet",
+              "Mobile App-Steuerung",
+              "Monatlich kündbar",
+            ]}
+          />
+          <PriceCard
+            title="Business"
+            tag="Empfohlen"
+            price="499 €"
+            unit="/ Jahr"
+            highlighted
+            features={[
+              "Automatische Updates",
+              "Premium Support (DE)",
+              "Mobile App-Steuerung",
+              "DSGVO-Logbuch & Export",
+            ]}
+          />
           <PriceCard
             title="Hardware Bundle"
             tag="Plug & Play"
@@ -350,19 +443,6 @@ function Pricing() {
               "Sofort einsatzbereit",
               "Lebenslange Hardware-Garantie",
               "Versand frei Haus innerhalb DE",
-            ]}
-          />
-          <PriceCard
-            title="Software Business"
-            tag="Empfohlen"
-            price="499 €"
-            unit="/ Jahr"
-            highlighted
-            features={[
-              "Automatische Updates",
-              "Premium Support (DE)",
-              "Mobile App-Steuerung",
-              "DSGVO-Logbuch & Export",
             ]}
           />
         </div>

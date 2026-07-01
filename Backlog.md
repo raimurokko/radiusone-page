@@ -17,6 +17,19 @@ Offene Punkte, priorisiert. Stand: 2026-07-01.
       [index.tsx](src/routes/index.tsx)) – Garantieumfang/-dauer definieren oder umformulieren;
       schlichtes „DSGVO-konform" im Hero ggf. an „DSGVO-konform gestaltet" angleichen.
 
+## Angebot / Content
+
+- [x] Preis-Editionen auf 3 erweitert: Managed (29 €/Mon.), Business (499 €/J.),
+      Hardware Bundle (799 €). On-Premise-/Souveränitäts-Sektion + Kostenvergleich ergänzt.
+- [ ] **Community-Edition (kostenlos/Open Source)** ergänzen, sobald die **Lizenzfrage
+      geklärt** ist. Dann auch „basiert auf offenen Standards" → explizites „Open Source"
+      hochstufen (aktuell bewusst zurückhaltend formuliert).
+- [ ] **Managed-Features bestätigen** ([index.tsx](src/routes/index.tsx) `Pricing`): aktuell
+      plausibel angenommen (kein eigener Server, gehostet, Mobile-App, monatlich kündbar) –
+      mit echtem Leistungsumfang abgleichen.
+- [ ] Produktreife: Website verkauft als „verfügbar" (bestätigt) – bei Statusänderung
+      Verfügbarkeits-Claims und Pilotkundin-Zitat prüfen.
+
 ## Funktionalität
 
 - [ ] **Demo-Formular anbinden** ([index.tsx](src/routes/index.tsx) `FinalCTA`): aktuell ohne
