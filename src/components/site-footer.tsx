@@ -4,6 +4,7 @@ import { COMPANY } from "@/lib/site";
 // Gemeinsamer Seitenfuß mit verlinkten Rechtsseiten.
 export function SiteFooter() {
   const year = new Date().getFullYear();
+  const base = import.meta.env.BASE_URL;
   return (
     <footer className="border-t border-border bg-surface">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-10 text-sm text-muted-foreground md:flex-row">
@@ -17,13 +18,13 @@ export function SiteFooter() {
           </span>
         </div>
         <nav aria-label="Rechtliches" className="flex flex-wrap items-center justify-center gap-6">
-          <a href="/impressum" className="hover:text-foreground">
+          <a href={`${base}impressum`} className="hover:text-foreground">
             Impressum
           </a>
-          <a href="/datenschutz" className="hover:text-foreground">
+          <a href={`${base}datenschutz`} className="hover:text-foreground">
             Datenschutz
           </a>
-          <a href="/barrierefreiheit" className="hover:text-foreground">
+          <a href={`${base}barrierefreiheit`} className="hover:text-foreground">
             Barrierefreiheit
           </a>
           <a href={`mailto:${COMPANY.email}`} className="hover:text-foreground">

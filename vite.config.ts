@@ -9,6 +9,9 @@ import viteReact from "@vitejs/plugin-react";
 // Plugin order matches TanStack Start's requirements: tailwind + path aliases
 // first, then tanstackStart, then the nitro server build, then the React plugin.
 export default defineConfig({
+  // Base-Pfad für Unterordner-Deploys (GitHub-Pages-Projektseite). Wird im
+  // CI-Workflow aus dem Repo-Namen gesetzt (z. B. "/radiusone-page/"); lokal "/".
+  base: process.env.BASE_PATH || "/",
   server: { port: 4321 },
   plugins: [
     tailwindcss(),

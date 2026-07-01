@@ -27,6 +27,9 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
+      - name: Base-Pfad aus Repo-Namen ableiten (Projektseite = Unterordner)
+        run: echo "BASE_PATH=/${GITHUB_REPOSITORY#*/}/" >> "$GITHUB_ENV"
+
       - name: Build (static prerender -> .output/public)
         run: bun run build
 

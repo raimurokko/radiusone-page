@@ -1,12 +1,14 @@
 import { ArrowRight, Wifi } from "lucide-react";
 
-// Gemeinsamer Seitenkopf. Anker-Links sind absolut (/#…), damit sie auch von
-// den Rechtsseiten aus zur Startseite navigieren.
+// Gemeinsamer Seitenkopf. Anker-Links zeigen absolut auf die Startseite, mit
+// Base-Pfad-Präfix (import.meta.env.BASE_URL), damit sie auch unter einem
+// Unterordner-Deploy (GitHub-Pages-Projektseite) korrekt navigieren.
 export function SiteHeader() {
+  const base = import.meta.env.BASE_URL;
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <a href="/" className="flex items-center gap-2.5" aria-label="RadiusOne – Startseite">
+        <a href={base} className="flex items-center gap-2.5" aria-label="RadiusOne – Startseite">
           <div className="grid h-8 w-8 place-items-center rounded-lg bg-primary text-primary-foreground">
             <Wifi className="h-4 w-4" />
           </div>
@@ -21,21 +23,21 @@ export function SiteHeader() {
           aria-label="Hauptnavigation"
           className="hidden items-center gap-8 text-sm text-muted-foreground md:flex"
         >
-          <a href="/#problem" className="transition-colors hover:text-foreground">
+          <a href={`${base}#problem`} className="transition-colors hover:text-foreground">
             Problem
           </a>
-          <a href="/#how" className="transition-colors hover:text-foreground">
+          <a href={`${base}#how`} className="transition-colors hover:text-foreground">
             So funktioniert's
           </a>
-          <a href="/#app" className="transition-colors hover:text-foreground">
+          <a href={`${base}#app`} className="transition-colors hover:text-foreground">
             App
           </a>
-          <a href="/#pricing" className="transition-colors hover:text-foreground">
+          <a href={`${base}#pricing`} className="transition-colors hover:text-foreground">
             Angebot
           </a>
         </nav>
         <a
-          href="/#demo"
+          href={`${base}#demo`}
           className="inline-flex items-center gap-1.5 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground shadow-soft transition-transform hover:scale-[1.02]"
         >
           Demo buchen <ArrowRight className="h-3.5 w-3.5" />
