@@ -22,6 +22,7 @@ import heroImg from "@/assets/hero-router.jpg";
 import appImg from "@/assets/app-mockup.jpg";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { BedarfsCheck } from "@/components/bedarfs-check";
 import { JsonLd } from "@/components/json-ld";
 import { SITE, COMPANY, canonical, productSchema, faqSchema, FAQ } from "@/lib/site";
 
@@ -348,7 +349,7 @@ function Sovereignty() {
     {
       icon: Scale,
       title: "Offene Standards",
-      desc: "Aufgebaut auf FreeRADIUS und WPA3-Enterprise – bewährte, herstellerunabhängige Technik ohne Lock-in.",
+      desc: "WPA3-Enterprise, 802.1X, EAP-TLS, FreeRADIUS und die OPNsense-Firewall – dieselbe Technik, auf der z. B. eduroam (das WLAN der Hochschulen) läuft. Herstellerunabhängig, ohne Lock-in.",
     },
   ];
   return (
@@ -387,9 +388,10 @@ function Sovereignty() {
             <ShieldCheck className="h-5 w-5" />
           </div>
           <p className="text-sm leading-relaxed text-foreground">
-            <strong className="font-semibold">Enterprise-Sicherheit zum KMU-Preis:</strong> rund 80
-            % der Enterprise-Funktionen für <strong className="text-primary">unter 600 €</strong> –
-            statt <strong>ab 5.000 €</strong> bei Cisco ISE oder Aruba ClearPass.
+            <strong className="font-semibold">Firewall und Zugangskontrolle in einer Box:</strong>{" "}
+            Reine NAC-Systeme wie Cisco ISE oder Aruba ClearPass setzen eine separate Firewall
+            voraus. RadiusOne liefert beides in einem Gerät – On-Premise, ohne zusätzliche
+            Appliance.
           </p>
         </div>
       </div>
@@ -401,62 +403,79 @@ function Pricing() {
   return (
     <section id="pricing" className="bg-secondary/40 py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto max-w-3xl text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.14em] text-accent-foreground/80">
-            Preise
+            Preis
           </span>
           <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-primary md:text-5xl">
-            Transparente Preise ohne versteckte Gebühren
+            Enterprise-Sicherheit – kalkuliert für kleine Teams, nicht für Konzerne.
           </h2>
+          <p className="mt-5 text-pretty text-lg text-muted-foreground">
+            RadiusOne nutzt dieselben offenen Sicherheitsstandards wie Cisco- und Aruba-Systeme –
+            WPA3-Enterprise, 802.1X und zertifikatsbasierte Authentifizierung (EAP-TLS). Nur ohne
+            Enterprise-Preisschild und ohne die Komplexität, die ein kleines Team nicht braucht.
+          </p>
+          <p className="mt-4 text-sm text-muted-foreground">
+            Cisco ISE oder Aruba ClearPass starten bei 5.000 € und mehr (Softwarelizenz, ohne
+            Hardware und Integration) und rechnen sich oft erst ab rund 500 Nutzern. RadiusOne ist
+            für kleine Teams gebaut und individuell kalkuliert.
+          </p>
         </div>
 
         <div className="mx-auto mt-14 grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-3">
           <PriceCard
-            title="Managed"
-            tag="Gehostet"
-            price="29 €"
-            unit="/ Monat"
+            title="Hardware Bundle"
+            tag="Basis"
+            note="Hardware immer inklusive"
+            sub="Einmalige Anschaffung"
             features={[
-              "Kein eigener Server nötig",
-              "Vollständig gehostet & gewartet",
-              "Mobile App-Steuerung",
-              "Monatlich kündbar",
+              "Firewall/Router (OPNsense-basiert) & Access Point vorinstalliert",
+              "Firewall und Zugangskontrolle in einer Box",
+              "Sofort einsatzbereit, Versand frei Haus (DE)",
+              "Erweiterte Hardware-Garantie",
             ]}
           />
           <PriceCard
             title="Business"
             tag="Empfohlen"
-            price="499 €"
-            unit="/ Jahr"
+            note="Software-Addon"
+            sub="self-hosted, volle Datenhoheit"
             highlighted
             features={[
+              "Cockpit & Configurator",
               "Automatische Updates",
               "Premium Support (DE)",
-              "Mobile App-Steuerung",
               "DSGVO-Logbuch & Export",
             ]}
           />
           <PriceCard
-            title="Hardware Bundle"
-            tag="Plug & Play"
-            price="799 €"
-            unit="einmalig"
+            title="Managed"
+            tag="Gehostet"
+            note="Software-Addon"
+            sub="gehostet – kein eigener Server nötig"
             features={[
-              "Router & Access Point vorinstalliert",
-              "Sofort einsatzbereit",
-              "Erweiterte Hardware-Garantie",
-              "Versand frei Haus innerhalb DE",
+              "Vollständig gehostet & gewartet",
+              "Cockpit & Configurator",
+              "Mobile App-Steuerung",
+              "Monatlich kündbar",
             ]}
           />
         </div>
 
-        <div className="mx-auto mt-10 flex max-w-3xl items-start gap-4 rounded-2xl border border-warning/30 bg-warning/5 p-5">
+        <BedarfsCheck />
+
+        <p className="mx-auto mt-6 max-w-3xl text-center text-xs text-muted-foreground">
+          Warum kein Listenpreis? Netzwerk-Hardware ist derzeit stark in Bewegung. Wir kalkulieren
+          jede Anfrage tagesaktuell und fair – statt einen veralteten Preis zu zeigen.
+        </p>
+
+        <div className="mx-auto mt-8 flex max-w-3xl items-start gap-4 rounded-2xl border border-warning/30 bg-warning/5 p-5">
           <div className="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-warning/15 text-warning">
             <AlertTriangle className="h-5 w-5" />
           </div>
           <p className="text-sm leading-relaxed text-foreground">
-            <strong className="font-semibold">Zum Vergleich:</strong> Ein DSGVO-Bußgeld droht mit
-            bis zu <strong className="text-warning">20.000.000 €</strong> (Art. 83 DSGVO).
+            <strong className="font-semibold">Zum Vergleich:</strong> Ein DSGVO-Bußgeld reicht bis
+            zu <strong className="text-warning">20.000.000 €</strong> (Art. 83 DSGVO).
           </p>
         </div>
       </div>
@@ -467,15 +486,15 @@ function Pricing() {
 function PriceCard({
   title,
   tag,
-  price,
-  unit,
+  note,
+  sub,
   features,
   highlighted,
 }: {
   title: string;
   tag: string;
-  price: string;
-  unit: string;
+  note: string;
+  sub: string;
   features: string[];
   highlighted?: boolean;
 }) {
@@ -499,15 +518,15 @@ function PriceCard({
           {tag}
         </span>
       </div>
-      <div className="mt-6 flex items-baseline gap-2">
-        <span className="font-display text-5xl font-extrabold tracking-tight">{price}</span>
-        <span
+      <div className="mt-6">
+        <span className="font-display text-2xl font-bold tracking-tight">{note}</span>
+        <p
           className={
-            "text-sm " + (highlighted ? "text-primary-foreground/70" : "text-muted-foreground")
+            "mt-1 text-sm " + (highlighted ? "text-primary-foreground/70" : "text-muted-foreground")
           }
         >
-          {unit}
-        </span>
+          {sub}
+        </p>
       </div>
       <ul className="mt-8 space-y-3.5">
         {features.map((f) => (

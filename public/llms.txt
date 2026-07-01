@@ -1,9 +1,10 @@
 # RadiusOne
 
 > RadiusOne ist eine Plug-&-Play-Lösung für DSGVO-konforme WLAN-Zugangsverwaltung
-> für Praxen, Kanzleien und kleine Büros. Statt eines gemeinsamen WLAN-Passworts
-> erhält jede Person einen individuellen, jederzeit entziehbaren Zugang. Marke der
-> Novum Analytica GmbH, Berlin. Hosting und Entwicklung in Deutschland.
+> für kleine Unternehmen – Praxen, Kanzleien, Betriebe, Handel und Gastronomie.
+> Statt eines gemeinsamen WLAN-Passworts erhält jede Person einen individuellen,
+> jederzeit entziehbaren Zugang. Marke der Novum Analytica GmbH, Berlin. Hosting
+> und Entwicklung in Deutschland.
 
 ## Kernnutzen
 
@@ -13,18 +14,23 @@
   Beitrag zur DSGVO-Konformität.
 - Einrichtung in ca. 30 Minuten ohne IT-Kenntnisse, Verwaltung per Mobile-App.
 - On-Premise im eigenen Netz, kein Cloud-Zwang, keine Nutzerdaten bei Dritten;
-  basiert auf offenen Standards (FreeRADIUS, WPA3-Enterprise). Rund 80 % der
-  Enterprise-Funktionen für unter 600 € statt ab 5.000 € (Cisco ISE / Aruba ClearPass).
+  offene Standards (WPA3-Enterprise, 802.1X, EAP-TLS, FreeRADIUS, OPNsense-Firewall) –
+  dieselbe Technologieklasse wie Cisco/Aruba, ohne Enterprise-Komplexität.
+- Firewall und Zugangskontrolle in einer Box (reine NAC-Systeme wie Cisco ISE /
+  Aruba ClearPass setzen eine separate Firewall voraus).
 
-## Preise
+## Preise & Editionen
 
-- Managed: 29 € / Monat (vollständig gehostet, kein eigener Server nötig).
-- Business: 499 € / Jahr (Updates, Premium-Support aus DE, Mobile-App, DSGVO-Logbuch).
-- Hardware Bundle (Plug & Play): 799 € einmalig (Router + Access Point vorinstalliert).
+- Kein Festpreis: individuell und tagesaktuell kalkuliert (Hardware-Preisvolatilität).
+- Hardware (Firewall/Router auf OPNsense-Basis + Access Point) ist immer enthalten.
+- Software als Addon: Business (self-hosted) oder Managed (gehostet, kein eigener Server).
+- Einordnung: Enterprise-Lösungen (Cisco ISE, Aruba ClearPass) starten bei 5.000 €+,
+  oft erst ab ~500 Nutzern wirtschaftlich.
+- Unverbindliche Einschätzung über den Bedarfs-Check auf der Startseite.
 
 ## Seiten
 
-- [Startseite](https://radiusone.novumanalytica.com/): Produktübersicht, Ablauf, Preise, FAQ.
+- [Startseite](https://radiusone.novumanalytica.com/): Produktübersicht, Ablauf, Editionen, Bedarfs-Check, FAQ.
 - [Impressum](https://radiusone.novumanalytica.com/impressum)
 - [Datenschutz](https://radiusone.novumanalytica.com/datenschutz)
 - [Barrierefreiheit](https://radiusone.novumanalytica.com/barrierefreiheit)

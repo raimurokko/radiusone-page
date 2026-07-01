@@ -98,48 +98,8 @@ export function productSchema() {
       "@type": "Audience",
       audienceType: "kleine Unternehmen: Praxen, Kanzleien, Betriebe, Handel und Gastronomie",
     },
-    offers: [
-      {
-        "@type": "Offer",
-        name: "Managed",
-        price: "29",
-        priceCurrency: "EUR",
-        priceSpecification: {
-          "@type": "UnitPriceSpecification",
-          price: "29",
-          priceCurrency: "EUR",
-          unitText: "MON",
-          billingDuration: 1,
-          billingIncrement: 1,
-        },
-        availability: "https://schema.org/InStock",
-        url: canonical("/#pricing"),
-      },
-      {
-        "@type": "Offer",
-        name: "Hardware Bundle (Plug & Play)",
-        price: "799",
-        priceCurrency: "EUR",
-        availability: "https://schema.org/InStock",
-        url: canonical("/#pricing"),
-      },
-      {
-        "@type": "Offer",
-        name: "Business",
-        price: "499",
-        priceCurrency: "EUR",
-        priceSpecification: {
-          "@type": "UnitPriceSpecification",
-          price: "499",
-          priceCurrency: "EUR",
-          unitText: "JAHR",
-          billingDuration: 1,
-          billingIncrement: 1,
-        },
-        availability: "https://schema.org/InStock",
-        url: canonical("/#pricing"),
-      },
-    ],
+    // Bewusst ohne Offer/Preis: Preise werden individuell kalkuliert und nicht
+    // als Festpreis kommuniziert (Hardware-Preisvolatilität).
   };
 }
 
@@ -164,7 +124,7 @@ export const FAQ: { q: string; a: string }[] = [
   },
   {
     q: "Was kostet RadiusOne?",
-    a: "Es gibt drei Editionen: Managed für 29 € pro Monat (vollständig gehostet, kein eigener Server nötig), Business für 499 € pro Jahr (Updates, Premium-Support aus DE, Mobile-App, DSGVO-Logbuch) und das Hardware-Bundle für 799 € einmalig (Router und Access Point vorinstalliert).",
+    a: "Wir zeigen bewusst keinen Festpreis, weil sich die zugrunde liegenden Hardware-Kosten derzeit stark bewegen – so kalkulieren wir jede Anfrage tagesaktuell und fair. Die Hardware (Firewall/Router und Access Point) ist immer enthalten; die Software (Cockpit & Configurator) gibt es self-hosted (Business) oder gehostet (Managed). Zur Einordnung: Vergleichbare Enterprise-Lösungen wie Cisco ISE oder Aruba ClearPass starten bei 5.000 € und mehr. Eine unverbindliche Einschätzung erhalten Sie in zwei Minuten über den Bedarfs-Check auf der Startseite.",
   },
   {
     q: "Läuft RadiusOne in der Cloud?",

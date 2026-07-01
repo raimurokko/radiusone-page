@@ -20,16 +20,23 @@ Offene Punkte, priorisiert. Stand: 2026-07-01.
 
 ## Angebot / Content
 
-- [x] Preis-Editionen auf 3 erweitert: Managed (29 €/Mon.), Business (499 €/J.),
-      Hardware Bundle (799 €). On-Premise-/Souveränitäts-Sektion + Kostenvergleich ergänzt.
-- [ ] **Community-Edition (kostenlos/Open Source)** ergänzen, sobald die **Lizenzfrage
-      geklärt** ist. Dann auch „basiert auf offenen Standards" → explizites „Open Source"
-      hochstufen (aktuell bewusst zurückhaltend formuliert).
-- [ ] **Managed-Features bestätigen** ([index.tsx](src/routes/index.tsx) `Pricing`): aktuell
-      plausibel angenommen (kein eigener Server, gehostet, Mobile-App, monatlich kündbar) –
-      mit echtem Leistungsumfang abgleichen.
-- [ ] Produktreife: Website verkauft als „verfügbar" (bestätigt) – bei Statusänderung
-      Verfügbarkeits-Claims und Pilotkundin-Zitat prüfen.
+- [x] **Preisstrategie umgestellt (Juli 2026): keine Festpreise mehr.** Grund:
+      Hardware-Preisvolatilität (DRAM), Hardware ist immer im Angebot enthalten. Editionen
+      (Hardware Bundle/Business/Managed) bleiben als Struktur, aber ohne €. Product-Schema-Preise
+      entfernt, FAQ/llms.txt angepasst. Quelle: `material/RadiusOne_Preisanalyse_Juli2026.md`.
+- [x] **Bedarfs-Check** (statt „Konfigurator", um Verwechslung mit dem Produkt-Configurator zu
+      vermeiden): 3 Felder → qualitative Einschätzung ohne Zahl.
+- [x] Router → „Firewall/Router (OPNsense-basiert)"; Firewall+NAC-USP; Technologie-Gleichwertigkeit
+      (802.1X/EAP-TLS/eduroam); UWG-konformer Cisco/Aruba-Vergleich (5.000 €+, ab ~500 Nutzern).
+      „80 %/<600 €"-Claim entfernt (laut Analyse nicht mehr haltbar).
+- [ ] **Offene Geschäftsentscheidungen aus der Preisanalyse** (Abschnitt 9), sobald geklärt in
+      Copy einarbeiten: Werteleiter-Fix (Managed/Business-Verhältnis), finale Stückliste/Tiers
+      (Lite/Business/Multi-Site), Kombi-SKU Hardware+Business, Community-/Lizenzmodell.
+- [ ] DRAM-Transparenzhinweis ggf. verfeinern (aktuell bewusst kurz/selbstbewusst gehalten).
+- [ ] **Community-Edition (kostenlos/Open Source)** ergänzen, sobald die **Lizenzfrage geklärt** ist.
+- [ ] **Managed-/Business-Leistungsumfang bestätigen** (Cockpit & Configurator, Support, Hosting).
+- [ ] Produktreife klären (Analyse Abschnitt 11: „MVP geplant" vs. „transaktionsreif") – bei
+      Statusänderung Verfügbarkeits-Claims und Pilotkundin-Zitat prüfen.
 
 ## Funktionalität
 
