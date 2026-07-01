@@ -24,6 +24,15 @@ export default defineConfig({
       },
       // Route TanStack Start's server entry to src/server.ts (our SSR error wrapper).
       server: { entry: "server" },
+      // Statisches Prerendering für GitHub Pages: alle Routen als fertiges HTML
+      // nach .output/public (keine Server-Laufzeit nötig).
+      prerender: { enabled: true, crawlLinks: true },
+      pages: [
+        { path: "/" },
+        { path: "/impressum" },
+        { path: "/datenschutz" },
+        { path: "/barrierefreiheit" },
+      ],
     }),
     // nitro only runs at build time. No preset => portable node-server output
     // (Lovable forced cloudflare-module; we stay deploy-target agnostic).
