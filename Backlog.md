@@ -20,21 +20,29 @@ Offene Punkte, priorisiert. Stand: 2026-07-01.
 
 ## Angebot / Content
 
-- [x] **Preisstrategie umgestellt (Juli 2026): keine Festpreise mehr.** Grund:
-      Hardware-Preisvolatilität (DRAM), Hardware ist immer im Angebot enthalten. Editionen
-      (Hardware Bundle/Business/Managed) bleiben als Struktur, aber ohne €. Product-Schema-Preise
-      entfernt, FAQ/llms.txt angepasst. Quelle: `material/RadiusOne_Preisanalyse_Juli2026.md`.
+- [x] **Angebotsmodell = Schutz-Abo (Miete), keine Festpreise (Option C).** Produkt ist die Box
+      (Router mit RADIUS + OPNsense + eigener Mesh-/Cockpit-Schicht + App); die Software läuft
+      immer auf der Box (kein „self-hosted vs. gehostet"). Ein monatliches Schutz-Abo, Box als
+      Miete inkl. Austausch/Upgrade; Kauf alternativ auf Anfrage. Zusatz-Schutz: Security+
+      (IDS/IPS), Multi-Site (VPN), Vor-Ort. Alte 3-Editionen-Karten (Hardware/Business/Managed)
+      ersetzt. Quelle: `material/RadiusOne_Preisanalyse_Juli2026.md`.
+- [x] **Cloud konfigurierbar** kommuniziert: Standard on-premise, Cloud-Funktionen (Dashboard,
+      Backup, standortübergreifende Verwaltung) optional pro Kunde. Souveränitäts-Copy + FAQ
+      entsprechend ehrlich formuliert („Datensouveränität nach Maß").
 - [x] **Bedarfs-Check** (statt „Konfigurator", um Verwechslung mit dem Produkt-Configurator zu
-      vermeiden): 3 Felder → qualitative Einschätzung ohne Zahl.
+      vermeiden): 3 Felder → Empfehlung Schutz-Abo (Selbst/Managed) + passender Zusatz-Schutz.
 - [x] Router → „Firewall/Router (OPNsense-basiert)"; Firewall+NAC-USP; Technologie-Gleichwertigkeit
       (802.1X/EAP-TLS/eduroam); UWG-konformer Cisco/Aruba-Vergleich (5.000 €+, ab ~500 Nutzern).
       „80 %/<600 €"-Claim entfernt (laut Analyse nicht mehr haltbar).
-- [ ] **Offene Geschäftsentscheidungen aus der Preisanalyse** (Abschnitt 9), sobald geklärt in
-      Copy einarbeiten: Werteleiter-Fix (Managed/Business-Verhältnis), finale Stückliste/Tiers
-      (Lite/Business/Multi-Site), Kombi-SKU Hardware+Business, Community-/Lizenzmodell.
+- [ ] **Offene Geschäftsentscheidungen aus der Preisanalyse** (Abschnitt 9): monatlicher
+      Schutz-Tarif festlegen (ggf. „ab X €/Monat" statt gar keiner Zahl), finale Stückliste,
+      Leasing-/Mietpartner (Abschnitt 10.4), Community-/Lizenzmodell.
+- [ ] **Cloud-Konfigurationsstufen konkret definieren** (Dashboard/Monitoring, Backup, zentrale
+      Nutzerverwaltung) inkl. DSGVO-Rolle (Auftragsverarbeitung), sobald Cloud aktiv.
+- [ ] Rechtliches zur Miete klären (Operating-Leasing/Miete vs. Finanzierungsleasing/§ 32 KWG,
+      ElektroG-Rücknahme) – keine Rechtsberatung, aber vor Go-Live prüfen lassen.
 - [ ] DRAM-Transparenzhinweis ggf. verfeinern (aktuell bewusst kurz/selbstbewusst gehalten).
 - [ ] **Community-Edition (kostenlos/Open Source)** ergänzen, sobald die **Lizenzfrage geklärt** ist.
-- [ ] **Managed-/Business-Leistungsumfang bestätigen** (Cockpit & Configurator, Support, Hosting).
 - [ ] Produktreife klären (Analyse Abschnitt 11: „MVP geplant" vs. „transaktionsreif") – bei
       Statusänderung Verfügbarkeits-Claims und Pilotkundin-Zitat prüfen.
 

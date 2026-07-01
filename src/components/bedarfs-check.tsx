@@ -7,18 +7,17 @@ import { ArrowRight, Sparkles } from "lucide-react";
 export function BedarfsCheck() {
   const [team, setTeam] = useState("");
   const [sites, setSites] = useState<"1" | "2-3" | "4+" | null>(null);
-  const [ownServer, setOwnServer] = useState<boolean | null>(null);
+  const [managed, setManaged] = useState<boolean | null>(null);
 
-  const ready = team.trim() !== "" && sites !== null && ownServer !== null;
+  const ready = team.trim() !== "" && sites !== null && managed !== null;
 
-  const empfehlung = ownServer ? "Business (self-hosted)" : "Managed (gehostet)";
-  const serverHinweis = ownServer
-    ? "Die Software läuft auf Ihrem eigenen Server – volle Datenhoheit."
-    : "Vollständig von uns gehostet – kein eigener Server nötig.";
+  const betreuungHinweis = managed
+    ? "mit Managed-Betreuung – wir warten und überwachen die Box aus der Ferne."
+    : "zur Selbstverwaltung über Cockpit & App.";
   const standortHinweis =
     sites === "1"
       ? "Ein Standort, eine Box."
-      : "Für mehrere Standorte planen wir Access Points bzw. eine Standort-Kopplung ein.";
+      : "Für mehrere Standorte kommt der Zusatz-Schutz Multi-Site (VPN) dazu.";
 
   return (
     <div className="mx-auto mt-14 max-w-3xl rounded-3xl border border-border bg-surface p-6 shadow-soft md:p-8">
@@ -69,20 +68,20 @@ export function BedarfsCheck() {
         </div>
 
         <div className="flex flex-col gap-2 text-sm font-medium text-foreground">
-          Eigener Server/IT?
+          Betreuung?
           <div className="grid grid-cols-2 gap-1.5">
             {[
-              { label: "Ja", val: true },
-              { label: "Nein", val: false },
+              { label: "Wir", val: true },
+              { label: "Selbst", val: false },
             ].map(({ label, val }) => (
               <button
                 key={label}
                 type="button"
-                onClick={() => setOwnServer(val)}
-                aria-pressed={ownServer === val}
+                onClick={() => setManaged(val)}
+                aria-pressed={managed === val}
                 className={
                   "rounded-xl border px-2 py-2.5 text-sm transition-colors " +
-                  (ownServer === val
+                  (managed === val
                     ? "border-primary bg-primary-soft text-primary"
                     : "border-border bg-background hover:bg-secondary")
                 }
@@ -97,10 +96,10 @@ export function BedarfsCheck() {
       {ready ? (
         <div className="mt-6 rounded-2xl border border-primary/20 bg-primary-soft/40 p-5">
           <p className="text-sm leading-relaxed text-foreground">
-            Für ein Team von <strong>{team}</strong> Personen empfehlen wir die Edition{" "}
-            <strong>{empfehlung}</strong>. {serverHinweis} {standortHinweis} Die vorkonfigurierte
-            Firewall/Router- und Access-Point-Hardware ist immer enthalten und in rund 30 Minuten
-            einsatzbereit.
+            Für ein Team von <strong>{team}</strong> Personen empfehlen wir das{" "}
+            <strong>RadiusOne-Schutz-Abo</strong> {betreuungHinweis} {standortHinweis} Die Box ist
+            als Miete enthalten und in rund 30 Minuten einsatzbereit; Sie entscheiden, was
+            on-premise bleibt und was optional in die Cloud geht.
           </p>
           <a
             href="#demo"
@@ -110,7 +109,7 @@ export function BedarfsCheck() {
           </a>
           <p className="mt-3 text-xs text-muted-foreground">
             Unverbindliche Orientierung, kein verbindliches Angebot. Ihren individuellen, fairen
-            Tagespreis erhalten Sie auf Anfrage.
+            Schutz-Tarif erhalten Sie auf Anfrage.
           </p>
         </div>
       ) : (

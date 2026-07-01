@@ -13,24 +13,26 @@
 - Automatische Protokollierung (Nachweis: wer war wann in welchem Netzbereich) als
   Beitrag zur DSGVO-Konformität.
 - Einrichtung in ca. 30 Minuten ohne IT-Kenntnisse, Verwaltung per Mobile-App.
-- On-Premise im eigenen Netz, kein Cloud-Zwang, keine Nutzerdaten bei Dritten;
-  offene Standards (WPA3-Enterprise, 802.1X, EAP-TLS, FreeRADIUS, OPNsense-Firewall) –
+- On-Premise als Standard, kein Cloud-Zwang; Cloud-Funktionen (Dashboard, Backup,
+  standortübergreifende Verwaltung) optional und pro Kunde konfigurierbar.
+- Offene Standards (WPA3-Enterprise, 802.1X, EAP-TLS, FreeRADIUS, OPNsense-Firewall) –
   dieselbe Technologieklasse wie Cisco/Aruba, ohne Enterprise-Komplexität.
 - Firewall und Zugangskontrolle in einer Box (reine NAC-Systeme wie Cisco ISE /
   Aruba ClearPass setzen eine separate Firewall voraus).
 
-## Preise & Editionen
+## Angebot & Preis
 
-- Kein Festpreis: individuell und tagesaktuell kalkuliert (Hardware-Preisvolatilität).
-- Hardware (Firewall/Router auf OPNsense-Basis + Access Point) ist immer enthalten.
-- Software als Addon: Business (self-hosted) oder Managed (gehostet, kein eigener Server).
+- Modell: monatliches Schutz-Abo. Die Box wird gemietet (Austausch/Upgrade inklusive),
+  Software, Updates und Support sind enthalten. Kauf statt Miete alternativ auf Anfrage.
+- Zusatz-Schutz zubuchbar: Security+ (IDS/IPS), Multi-Site (VPN), Vor-Ort-Einrichtung.
+- Kein Festpreis: individuell und fair kalkuliert (Hardware-Preisvolatilität).
 - Einordnung: Enterprise-Lösungen (Cisco ISE, Aruba ClearPass) starten bei 5.000 €+,
   oft erst ab ~500 Nutzern wirtschaftlich.
 - Unverbindliche Einschätzung über den Bedarfs-Check auf der Startseite.
 
 ## Seiten
 
-- [Startseite](https://radiusone.novumanalytica.com/): Produktübersicht, Ablauf, Editionen, Bedarfs-Check, FAQ.
+- [Startseite](https://radiusone.novumanalytica.com/): Produktübersicht, Ablauf, Schutz-Abo, Bedarfs-Check, FAQ.
 - [Impressum](https://radiusone.novumanalytica.com/impressum)
 - [Datenschutz](https://radiusone.novumanalytica.com/datenschutz)
 - [Barrierefreiheit](https://radiusone.novumanalytica.com/barrierefreiheit)

@@ -17,6 +17,8 @@ import {
   Server,
   CloudOff,
   Scale,
+  Building2,
+  MapPin,
 } from "lucide-react";
 import heroImg from "@/assets/hero-router.jpg";
 import appImg from "@/assets/app-mockup.jpg";
@@ -338,13 +340,13 @@ function Sovereignty() {
   const points = [
     {
       icon: Server,
-      title: "On-Premise statt Cloud",
-      desc: "Alles läuft auf Ihrer eigenen Hardware in Ihrem Netz – keine Abhängigkeit von externen Rechenzentren.",
+      title: "On-Premise als Standard",
+      desc: "Standardmäßig läuft alles auf Ihrer eigenen Box in Ihrem Netz. Cloud-Funktionen (Dashboard, Backup) schalten Sie nur frei, wenn Sie sie brauchen.",
     },
     {
       icon: CloudOff,
-      title: "Keine Daten bei Dritten",
-      desc: "Zugangs- und Nutzungsdaten verlassen Ihr Netzwerk nicht – ein echter Vorteil für den Datenschutz.",
+      title: "Sie entscheiden über Ihre Daten",
+      desc: "Von 100 % on-premise bis zentral verwaltet – Sie legen fest, was Ihr Netz verlässt. Nichts fließt ungefragt zu Dritten.",
     },
     {
       icon: Scale,
@@ -362,9 +364,9 @@ function Sovereignty() {
           <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-primary md:text-5xl">
             Ihre Daten bleiben bei Ihnen.
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            RadiusOne läuft On-Premise in Ihrem eigenen Netz – kein Cloud-Zwang, keine Nutzerdaten
-            bei Drittanbietern.
+          <p className="mt-4 text-pretty text-lg text-muted-foreground">
+            RadiusOne läuft standardmäßig On-Premise in Ihrem eigenen Netz – kein Cloud-Zwang.
+            Cloud-Funktionen sind optional und konfigurierbar, ganz nach Ihrem Bedarf.
           </p>
         </div>
 
@@ -405,7 +407,7 @@ function Pricing() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.14em] text-accent-foreground/80">
-            Preis
+            Angebot
           </span>
           <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-primary md:text-5xl">
             Enterprise-Sicherheit – kalkuliert für kleine Teams, nicht für Konzerne.
@@ -422,51 +424,73 @@ function Pricing() {
           </p>
         </div>
 
-        <div className="mx-auto mt-14 grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-3">
-          <PriceCard
-            title="Hardware Bundle"
-            tag="Basis"
-            note="Hardware immer inklusive"
-            sub="Einmalige Anschaffung"
-            features={[
-              "Firewall/Router (OPNsense-basiert) & Access Point vorinstalliert",
-              "Firewall und Zugangskontrolle in einer Box",
-              "Sofort einsatzbereit, Versand frei Haus (DE)",
-              "Erweiterte Hardware-Garantie",
-            ]}
-          />
-          <PriceCard
-            title="Business"
-            tag="Empfohlen"
-            note="Software-Addon"
-            sub="self-hosted, volle Datenhoheit"
-            highlighted
-            features={[
-              "Cockpit & Configurator",
-              "Automatische Updates",
-              "Premium Support (DE)",
-              "DSGVO-Logbuch & Export",
-            ]}
-          />
-          <PriceCard
-            title="Managed"
-            tag="Gehostet"
-            note="Software-Addon"
-            sub="gehostet – kein eigener Server nötig"
-            features={[
-              "Vollständig gehostet & gewartet",
-              "Cockpit & Configurator",
-              "Mobile App-Steuerung",
-              "Monatlich kündbar",
-            ]}
-          />
+        <div className="mx-auto mt-14 max-w-3xl rounded-3xl border-2 border-primary bg-surface p-8 shadow-glow md:p-10">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <div className="grid h-11 w-11 place-items-center rounded-xl bg-primary text-primary-foreground">
+                <ShieldCheck className="h-6 w-6" />
+              </div>
+              <h3 className="font-display text-2xl font-bold text-foreground">RadiusOne Schutz</h3>
+            </div>
+            <span className="rounded-full bg-primary-soft px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-primary">
+              Monatliches Abo
+            </span>
+          </div>
+          <p className="mt-4 text-pretty text-muted-foreground">
+            Rundum-Schutz im Abo, jederzeit kündbar. Die Box mieten Sie – inklusive Austausch und
+            Upgrade. Ihre Daten bleiben dabei bei Ihnen.
+          </p>
+          <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-3.5 sm:grid-cols-2">
+            {[
+              "Box als Miete inklusive – Austausch & Upgrade bei Bedarf",
+              "Firewall/Router (OPNsense-basiert) + FreeRADIUS",
+              "Mesh-Cockpit & App zur einfachen Verwaltung",
+              "Updates, Monitoring und Support aus Deutschland",
+              "Optional: zentrales Cloud-Dashboard & Backup",
+              "Datensouveränität nach Maß – standardmäßig on-premise",
+            ].map((f) => (
+              <div key={f} className="flex items-start gap-3 text-sm text-foreground">
+                <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                <span>{f}</span>
+              </div>
+            ))}
+          </div>
+          <a
+            href="#demo"
+            className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-6 py-3.5 text-sm font-semibold text-accent-foreground shadow-soft transition-all hover:shadow-elevated"
+          >
+            Unverbindliches Angebot anfragen <ArrowRight className="h-4 w-4" />
+          </a>
+        </div>
+
+        <div className="mx-auto mt-8 max-w-3xl">
+          <p className="text-center text-sm font-medium text-muted-foreground">
+            Zusatz-Schutz – bei Bedarf dazubuchen
+          </p>
+          <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
+            {[
+              { icon: ShieldCheck, title: "Security+", desc: "IDS/IPS (Suricata)" },
+              { icon: Building2, title: "Multi-Site", desc: "Standort-Kopplung (VPN)" },
+              { icon: MapPin, title: "Vor-Ort", desc: "Einrichtung beim Kunden" },
+            ].map(({ icon: Icon, title, desc }) => (
+              <div
+                key={title}
+                className="rounded-2xl border border-border bg-surface p-5 shadow-soft"
+              >
+                <Icon className="h-5 w-5 text-primary" strokeWidth={1.75} />
+                <p className="mt-3 font-display font-bold text-foreground">{title}</p>
+                <p className="mt-0.5 text-sm text-muted-foreground">{desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
         <BedarfsCheck />
 
         <p className="mx-auto mt-6 max-w-3xl text-center text-xs text-muted-foreground">
-          Warum kein Listenpreis? Netzwerk-Hardware ist derzeit stark in Bewegung. Wir kalkulieren
-          jede Anfrage tagesaktuell und fair – statt einen veralteten Preis zu zeigen.
+          Warum kein fixer Preis? Netzwerk-Hardware ist derzeit stark in Bewegung. Wir kalkulieren
+          jedes Schutz-Paket individuell und fair – Kauf statt Miete ist alternativ auf Anfrage
+          möglich.
         </p>
 
         <div className="mx-auto mt-8 flex max-w-3xl items-start gap-4 rounded-2xl border border-warning/30 bg-warning/5 p-5">
@@ -480,78 +504,6 @@ function Pricing() {
         </div>
       </div>
     </section>
-  );
-}
-
-function PriceCard({
-  title,
-  tag,
-  note,
-  sub,
-  features,
-  highlighted,
-}: {
-  title: string;
-  tag: string;
-  note: string;
-  sub: string;
-  features: string[];
-  highlighted?: boolean;
-}) {
-  return (
-    <article
-      className={
-        "relative flex flex-col rounded-2xl border p-8 shadow-soft transition-all hover:-translate-y-1 " +
-        (highlighted
-          ? "border-primary bg-primary text-primary-foreground shadow-glow"
-          : "border-border bg-surface")
-      }
-    >
-      <div className="flex items-center justify-between">
-        <h3 className="font-display text-xl font-bold">{title}</h3>
-        <span
-          className={
-            "rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider " +
-            (highlighted ? "bg-accent text-accent-foreground" : "bg-primary-soft text-primary")
-          }
-        >
-          {tag}
-        </span>
-      </div>
-      <div className="mt-6">
-        <span className="font-display text-2xl font-bold tracking-tight">{note}</span>
-        <p
-          className={
-            "mt-1 text-sm " + (highlighted ? "text-primary-foreground/70" : "text-muted-foreground")
-          }
-        >
-          {sub}
-        </p>
-      </div>
-      <ul className="mt-8 space-y-3.5">
-        {features.map((f) => (
-          <li key={f} className="flex items-start gap-3 text-sm">
-            <Check
-              className={
-                "mt-0.5 h-4 w-4 flex-shrink-0 " + (highlighted ? "text-accent" : "text-primary")
-              }
-            />
-            <span>{f}</span>
-          </li>
-        ))}
-      </ul>
-      <a
-        href="#demo"
-        className={
-          "mt-10 inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition-all " +
-          (highlighted
-            ? "bg-accent text-accent-foreground hover:shadow-elevated"
-            : "border border-border bg-background text-foreground hover:bg-secondary")
-        }
-      >
-        Demo buchen <ArrowRight className="h-4 w-4" />
-      </a>
-    </article>
   );
 }
 

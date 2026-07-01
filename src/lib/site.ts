@@ -124,11 +124,11 @@ export const FAQ: { q: string; a: string }[] = [
   },
   {
     q: "Was kostet RadiusOne?",
-    a: "Wir zeigen bewusst keinen Festpreis, weil sich die zugrunde liegenden Hardware-Kosten derzeit stark bewegen – so kalkulieren wir jede Anfrage tagesaktuell und fair. Die Hardware (Firewall/Router und Access Point) ist immer enthalten; die Software (Cockpit & Configurator) gibt es self-hosted (Business) oder gehostet (Managed). Zur Einordnung: Vergleichbare Enterprise-Lösungen wie Cisco ISE oder Aruba ClearPass starten bei 5.000 € und mehr. Eine unverbindliche Einschätzung erhalten Sie in zwei Minuten über den Bedarfs-Check auf der Startseite.",
+    a: "RadiusOne gibt es als monatliches Schutz-Abo: Die Box mieten Sie (inklusive Austausch und Upgrade), Software, Updates und Support sind enthalten. Einen fixen Preis zeigen wir bewusst nicht, weil sich die zugrunde liegenden Hardware-Kosten derzeit stark bewegen – so kalkulieren wir jedes Schutz-Paket individuell und fair. Zur Einordnung: Vergleichbare Enterprise-Lösungen wie Cisco ISE oder Aruba ClearPass starten bei 5.000 € und mehr. Eine unverbindliche Einschätzung erhalten Sie in zwei Minuten über den Bedarfs-Check auf der Startseite. Kauf statt Miete ist alternativ auf Anfrage möglich.",
   },
   {
     q: "Läuft RadiusOne in der Cloud?",
-    a: "Auf Wunsch nicht: RadiusOne läuft On-Premise in Ihrem eigenen Netz, ohne Cloud-Zwang und ohne dass Nutzerdaten an Drittanbieter fließen. Die Technik basiert auf offenen Standards (FreeRADIUS, WPA3-Enterprise). Wer keinen eigenen Server betreiben möchte, kann alternativ die gehostete Managed-Edition nutzen.",
+    a: "Das entscheiden Sie: Standardmäßig läuft RadiusOne On-Premise auf Ihrer eigenen Box, ohne Cloud-Zwang. Cloud-Funktionen wie ein zentrales Dashboard, Backup oder standortübergreifende Verwaltung sind optional und werden pro Kunde konfiguriert – von 100 % on-premise bis zentral verwaltet. Die Technik basiert auf offenen Standards (FreeRADIUS, WPA3-Enterprise, OPNsense).",
   },
   {
     q: "Für wen ist RadiusOne geeignet?",
