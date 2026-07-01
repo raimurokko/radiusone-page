@@ -75,17 +75,15 @@ function Datenschutz() {
 
       <h2>5. Demo-Anfrage / Kontaktaufnahme</h2>
       <p>
-        Wenn Sie über das Demo-Formular oder per E-Mail Kontakt aufnehmen, verarbeiten wir die von
-        Ihnen angegebenen Daten (z. B. Name und E-Mail-Adresse) ausschließlich zur Bearbeitung Ihrer
-        Anfrage und zur Vereinbarung eines Demo-Termins (Art. 6 Abs. 1 lit. b und lit. f DSGVO). Die
-        Daten werden gelöscht, sobald sie für den Zweck nicht mehr erforderlich sind und keine
-        gesetzlichen Aufbewahrungspflichten entgegenstehen.
-      </p>
-      <p>
-        <strong>
-          [TODO: Sobald das Demo-Formular an ein Backend/CRM angebunden ist, Empfänger,
-          Auftragsverarbeiter und Speicherdauer hier konkretisieren.]
-        </strong>
+        Das Demo-Formular auf dieser Website speichert{" "}
+        <strong>keine Daten auf unseren Servern</strong>
+        und übermittelt nichts automatisch. Es öffnet lediglich Ihr eigenes E-Mail-Programm mit
+        einer vorausgefüllten Nachricht, die Sie selbst absenden. Erst mit dem Versand dieser E-Mail
+        (oder einer direkten Nachricht an uns) verarbeiten wir die von Ihnen angegebenen Daten (z.
+        B. Name und E-Mail-Adresse) ausschließlich zur Bearbeitung Ihrer Anfrage und zur
+        Vereinbarung eines Demo-Termins (Art. 6 Abs. 1 lit. b und lit. f DSGVO). Die Daten werden
+        gelöscht, sobald sie für den Zweck nicht mehr erforderlich sind und keine gesetzlichen
+        Aufbewahrungspflichten entgegenstehen.
       </p>
 
       <h2>6. Ihre Rechte</h2>

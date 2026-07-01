@@ -33,11 +33,15 @@ Offene Punkte, priorisiert. Stand: 2026-07-01.
 
 ## Funktionalität
 
-- [ ] **Demo-Formular anbinden** ([index.tsx](src/routes/index.tsx) `FinalCTA`): aktuell ohne
-      Submit-Handler/Backend. Ziel-Backend/CRM festlegen, Terminbuchung real machen,
-      danach Datenschutz Abschnitt 5 konkretisieren (Empfänger, AV-Vertrag, Speicherdauer).
-- [ ] Terminkacheln zeigen statische Beispiel-Daten (Di 24 … Fr 27) – dynamisieren oder
-      durch echte Kalenderintegration ersetzen.
+- [x] **Demo-Formular** öffnet nun das E-Mail-Programm mit vorausgefüllter Standardmail
+      (mailto, kein Backend – bewusst wegen geringer Nachfrage). Datenschutz Abschnitt 5
+      entsprechend angepasst.
+- [x] Terminkacheln auf Wochentag+Uhrzeit umgestellt (auswählbar, keine veraltenden Datumsangaben).
+- [x] „Nach oben"-Button (erscheint ab 600 px Scrolltiefe).
+- [x] Barrierefreiheits-Widget (Rollstuhl-Button mittig rechts): Dyslexie-Schrift (OpenDyslexic,
+      self-hosted), größere Schrift, hoher Kontrast; in localStorage gespeichert.
+- [ ] Falls die Nachfrage steigt: Demo-Buchung an echtes Backend/CRM anbinden, dann Datenschutz
+      Abschnitt 5 um Empfänger/AV-Vertrag/Speicherdauer ergänzen.
 - [ ] Footer-„Kontakt" ist ein `mailto:` – ggf. eigene Kontaktseite/-formular.
 
 ## SEO / AEO / Performance

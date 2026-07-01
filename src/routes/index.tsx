@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import {
   ShieldCheck,
   Lock,
@@ -22,7 +23,7 @@ import appImg from "@/assets/app-mockup.jpg";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { JsonLd } from "@/components/json-ld";
-import { SITE, canonical, productSchema, faqSchema, FAQ } from "@/lib/site";
+import { SITE, COMPANY, canonical, productSchema, faqSchema, FAQ } from "@/lib/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -534,6 +535,43 @@ function PriceCard({
 }
 
 function FinalCTA() {
+  const SLOTS = [
+    { d: "Di", t: "10:00" },
+    { d: "Mi", t: "14:30" },
+    { d: "Do", t: "09:00" },
+    { d: "Do", t: "16:00" },
+    { d: "Fr", t: "11:00" },
+    { d: "Fr", t: "15:00" },
+  ];
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [slot, setSlot] = useState<number | null>(null);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const wunschtermin = slot !== null ? `${SLOTS[slot].d}, ${SLOTS[slot].t} Uhr` : "";
+    const body = [
+      "Guten Tag,",
+      "",
+      "ich interessiere mich für eine unverbindliche, 15-minütige RadiusOne-Demo.",
+      "",
+      `Name & Praxis/Kanzlei: ${name}`,
+      `E-Mail für Rückfragen: ${email}`,
+      `Wunschtermin: ${wunschtermin}`,
+      "Telefon (optional): ",
+      "Format (bitte auswählen): vor Ort / per Videokonferenz",
+      "",
+      "Bitte schlagen Sie mir einen passenden Termin vor.",
+      "",
+      "Mit freundlichen Grüßen",
+    ].join("\r\n");
+    const href =
+      `mailto:${COMPANY.email}` +
+      `?subject=${encodeURIComponent("Demo-Anfrage RadiusOne")}` +
+      `&body=${encodeURIComponent(body)}`;
+    window.location.href = href;
+  };
+
   return (
     <section id="demo" className="px-6 py-24">
       <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl bg-primary p-10 shadow-glow md:p-16">
@@ -573,43 +611,42 @@ function FinalCTA() {
               </div>
               <div>
                 <div className="font-display text-sm font-bold text-foreground">
-                  Termin auswählen
+                  Wunschzeit wählen
                 </div>
-                <div className="text-xs text-muted-foreground">Diese Woche · 15 Min</div>
+                <div className="text-xs text-muted-foreground">15-Minuten-Demo</div>
               </div>
             </div>
             <div className="mt-5 grid grid-cols-3 gap-2">
-              {[
-                { d: "Di", n: "24", t: "10:00" },
-                { d: "Mi", n: "25", t: "14:30" },
-                { d: "Do", n: "26", t: "09:00" },
-                { d: "Do", n: "26", t: "16:00" },
-                { d: "Fr", n: "27", t: "11:00" },
-                { d: "Fr", n: "27", t: "15:00" },
-              ].map((s, i) => (
+              {SLOTS.map((s, i) => (
                 <button
                   key={i}
+                  type="button"
+                  onClick={() => setSlot(i)}
+                  aria-pressed={slot === i}
                   className={
                     "rounded-xl border p-3 text-left transition-all hover:border-primary hover:bg-primary-soft " +
-                    (i === 2 ? "border-primary bg-primary-soft" : "border-border bg-background")
+                    (slot === i ? "border-primary bg-primary-soft" : "border-border bg-background")
                   }
                 >
                   <div className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
                     {s.d}
                   </div>
-                  <div className="font-display text-lg font-bold text-foreground">{s.n}</div>
-                  <div className="text-xs text-primary">{s.t}</div>
+                  <div className="font-display text-lg font-bold text-foreground">{s.t}</div>
                 </button>
               ))}
             </div>
-            <form className="mt-5 space-y-3">
+            <form className="mt-5 space-y-3" onSubmit={handleSubmit}>
               <input
                 type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 placeholder="Name & Praxis"
                 className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary"
               />
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="E-Mail Adresse"
                 className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary"
               />
@@ -617,8 +654,12 @@ function FinalCTA() {
                 type="submit"
                 className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-accent px-5 py-3.5 text-sm font-semibold text-accent-foreground shadow-soft transition-all hover:shadow-elevated"
               >
-                Termin bestätigen <ArrowRight className="h-4 w-4" />
+                Demo per E-Mail anfragen <ArrowRight className="h-4 w-4" />
               </button>
+              <p className="text-center text-xs text-muted-foreground">
+                Öffnet Ihr E-Mail-Programm mit einer vorausgefüllten Nachricht – Sie ergänzen und
+                senden sie nur noch ab.
+              </p>
             </form>
           </div>
         </div>

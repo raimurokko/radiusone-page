@@ -34,6 +34,10 @@ function Barrierefreiheit() {
 
       <h2>Umgesetzte Maßnahmen</h2>
       <ul>
+        <li>
+          Barrierefreiheits-Widget (Symbol rechts): Dyslexie-Schrift (OpenDyslexic), größere Schrift
+          und hoher Kontrast – umschaltbar und dauerhaft gespeichert
+        </li>
         <li>Semantische HTML-Struktur mit klarer Überschriften-Hierarchie</li>
         <li>Aussagekräftige Alternativtexte für inhaltstragende Bilder</li>
         <li>

@@ -154,3 +154,27 @@
   margin-bottom: 1rem;
   color: var(--color-muted-foreground);
 }
+
+/* Barrierefreiheits-Widget: umschaltbare Darstellungshilfen (via <html>-Klassen). */
+.dyslexia-friendly,
+.dyslexia-friendly * {
+  font-family: "OpenDyslexic", var(--font-sans) !important;
+  letter-spacing: 0.03em;
+  word-spacing: 0.08em;
+}
+html.a11y-large-text {
+  font-size: 118%;
+}
+.high-contrast {
+  --background: #ffffff;
+  --foreground: #000000;
+  --surface: #ffffff;
+  --card: #ffffff;
+  --muted-foreground: #1a1a1a;
+  --border: #000000;
+  --primary: #0a3d2a;
+  --primary-foreground: #ffffff;
+}
+.high-contrast a:not([class]) {
+  text-decoration: underline;
+}

@@ -11,6 +11,8 @@ import { type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { JsonLd } from "@/components/json-ld";
+import { ScrollToTop } from "@/components/scroll-to-top";
+import { AccessibilityWidget } from "@/components/accessibility-widget";
 import { SITE, organizationSchema, webSiteSchema } from "@/lib/site";
 
 function NotFoundComponent() {
@@ -112,6 +114,8 @@ function RootShell({ children }: { children: ReactNode }) {
       <body>
         <JsonLd schema={[organizationSchema(), webSiteSchema()]} />
         {children}
+        <ScrollToTop />
+        <AccessibilityWidget />
         <Scripts />
       </body>
     </html>
