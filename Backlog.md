@@ -1,91 +1,75 @@
 # Backlog – RadiusOne Website
 
-Offene Punkte, priorisiert. Stand: 2026-07-01.
+Offene Punkte, priorisiert. Stand: Juli 2026.
 
-## Rechtliches (Blocker vor Go-Live)
+## Vor Go-Live (Blocker / Geschäftsentscheidungen)
 
-- [x] **USt-IdNr.** (DE362600306) und **D-U-N-S** (344660265) im
-      [Impressum](src/routes/impressum.tsx) eingetragen und in das Organization-Schema
-      aufgenommen.
-- [x] **Datenschutzbeauftragte:** Olga Mogilevskaya im [datenschutz.tsx](src/routes/datenschutz.tsx)
-      eingetragen (Kontakt aktuell über Firmenadresse; ggf. dedizierte datenschutz@-Adresse ergänzen).
-- [x] **Barrierefreiheit:** Selbstbewertung (Juli 2026) durchgeführt, offene Punkte + zuständige
-      Stelle (MLBF, Magdeburg) in [barrierefreiheit.tsx](src/routes/barrierefreiheit.tsx) eingetragen;
-      Formularfelder beschriftet (aria-label). Kontraste AA-geprüft.
-- [ ] **Barrierefreiheit – Rest (nicht zwingend AA-Blocker):** externe/AT-Prüfung, Skip-Link,
-      prefers-reduced-motion, Gruppen-Labels (fieldset) im Bedarfs-Check.
 - [ ] **BFSG-Anwendbarkeit klären:** Greift das BFSG für diese (B2B-)Marketingseite überhaupt?
-      (Kleinstunternehmen-Ausnahme bei Dienstleistungen, B2C-/E-Commerce-Bezug) – vor Go-Live prüfen.
-- [x] TrustBar-Claims entschärft: „TÜV-geprüft" → „Entwickelt nach anerkannten
-      Sicherheitsstandards"; „100 % DSGVO-konform (Art. 83-sicher)" → „DSGVO-konform
-      gestaltet". „Hosting & Entwicklung in Deutschland" bleibt (bestätigt).
-- [ ] Schlichtes „DSGVO-konform" im Hero ggf. an „DSGVO-konform gestaltet" angleichen.
-
-## Angebot / Content
-
-- [x] **Angebotsmodell = Schutz-Abo (Miete), keine Festpreise (Option C).** Produkt ist die Box
-      (Router mit RADIUS + OPNsense + eigener Mesh-/Cockpit-Schicht + App); die Software läuft
-      immer auf der Box (kein „self-hosted vs. gehostet"). Ein monatliches Schutz-Abo, Box als
-      Miete inkl. Austausch/Upgrade; Kauf alternativ auf Anfrage. Zusatz-Schutz: Security+
-      (IDS/IPS), Multi-Site (VPN), Vor-Ort. Alte 3-Editionen-Karten (Hardware/Business/Managed)
-      ersetzt. Quelle: `material/RadiusOne_Preisanalyse_Juli2026.md`.
-- [x] **Cloud konfigurierbar** kommuniziert: Standard on-premise, Cloud-Funktionen (Dashboard,
-      Backup, standortübergreifende Verwaltung) optional pro Kunde. Souveränitäts-Copy + FAQ
-      entsprechend ehrlich formuliert („Datensouveränität nach Maß").
-- [x] **Bedarfs-Check** (statt „Konfigurator", um Verwechslung mit dem Produkt-Configurator zu
-      vermeiden): 3 Felder → Empfehlung Schutz-Abo (Selbst/Managed) + passender Zusatz-Schutz.
-- [x] Router → „Firewall/Router (OPNsense-basiert)"; Firewall+NAC-USP; Technologie-Gleichwertigkeit
-      (802.1X/EAP-TLS/eduroam); UWG-konformer Cisco/Aruba-Vergleich (5.000 €+, ab ~500 Nutzern).
-      „80 %/<600 €"-Claim entfernt (laut Analyse nicht mehr haltbar).
-- [ ] **Offene Geschäftsentscheidungen aus der Preisanalyse** (Abschnitt 9): monatlicher
-      Schutz-Tarif festlegen (ggf. „ab X €/Monat" statt gar keiner Zahl), finale Stückliste,
-      Leasing-/Mietpartner (Abschnitt 10.4), Community-/Lizenzmodell.
+      (Kleinstunternehmen-Ausnahme bei Dienstleistungen, B2C-/E-Commerce-Bezug) – rechtlich prüfen.
+- [ ] **Rechtliches zum Miet-/Schutz-Abo:** Operating-Leasing/Miete vs. Finanzierungsleasing
+      (§ 32 KWG), ElektroG-Rücknahmepflichten. Keine Rechtsberatung – vor Go-Live prüfen lassen.
+- [ ] **Offene Geschäftsentscheidungen** (`material/RadiusOne_Preisanalyse_Juli2026.md`, Abschnitt 9):
+      monatlicher Schutz-Tarif festlegen (ggf. „ab X €/Monat"), finale Stückliste, Leasing-/Miet­partner,
+      Community-/Lizenzmodell, Produktreife-Status (MVP vs. transaktionsreif → dann Verfügbarkeits-Claims
+      und Pilotkundin-Zitat prüfen).
 - [ ] **Cloud-Konfigurationsstufen konkret definieren** (Dashboard/Monitoring, Backup, zentrale
-      Nutzerverwaltung) inkl. DSGVO-Rolle (Auftragsverarbeitung), sobald Cloud aktiv.
-- [ ] Rechtliches zur Miete klären (Operating-Leasing/Miete vs. Finanzierungsleasing/§ 32 KWG,
-      ElektroG-Rücknahme) – keine Rechtsberatung, aber vor Go-Live prüfen lassen.
-- [ ] DRAM-Transparenzhinweis ggf. verfeinern (aktuell bewusst kurz/selbstbewusst gehalten).
-- [ ] **Community-Edition (kostenlos/Open Source)** ergänzen, sobald die **Lizenzfrage geklärt** ist.
-- [ ] Produktreife klären (Analyse Abschnitt 11: „MVP geplant" vs. „transaktionsreif") – bei
-      Statusänderung Verfügbarkeits-Claims und Pilotkundin-Zitat prüfen.
+      Nutzerverwaltung) inkl. DSGVO-Rolle (Auftragsverarbeitung), sobald die Cloud aktiv ist.
 
-## Funktionalität
+## Deployment / Infrastruktur
 
-- [x] **Demo-Formular** öffnet nun das E-Mail-Programm mit vorausgefüllter Standardmail
-      (mailto, kein Backend – bewusst wegen geringer Nachfrage). Datenschutz Abschnitt 5
-      entsprechend angepasst.
-- [x] Terminkacheln auf Wochentag+Uhrzeit umgestellt (auswählbar, keine veraltenden Datumsangaben).
-- [x] „Nach oben"-Button (erscheint ab 600 px Scrolltiefe).
-- [x] Barrierefreiheits-Widget (Rollstuhl-Button mittig rechts): Dyslexie-Schrift (OpenDyslexic,
-      self-hosted), größere Schrift, hoher Kontrast; in localStorage gespeichert.
-- [ ] Falls die Nachfrage steigt: Demo-Buchung an echtes Backend/CRM anbinden, dann Datenschutz
-      Abschnitt 5 um Empfänger/AV-Vertrag/Speicherdauer ergänzen.
+- [ ] **GitHub Pages ist blockiert, weil das Repo ein Fork ist** (Pages/Actions bei Forks deaktiviert,
+      in den Settings nicht freischaltbar). Der Build-Job läuft in CI, nur der Deploy scheitert.
+      Optionen: (a) Fork zu eigenständigem Repo entkoppeln (GitHub-Support „detach" oder neues Repo),
+      (b) forkfähiger Host wie Cloudflare Pages / Netlify, (c) später Codeberg-/GitLab-Pages.
+- [ ] **GitLab**- und **Codeberg**-Remote hinzufügen (kommt später).
+- [ ] Deploy-Ziel final festlegen (aktuell: statisches Prerender-Output `.output/public`).
+
+## Content / Feinschliff
+
+- [ ] Schlichtes „DSGVO-konform" im Hero ggf. an „DSGVO-konform gestaltet" angleichen.
+- [ ] DRAM-/Preis-Transparenzhinweis ggf. verfeinern (aktuell bewusst kurz/selbstbewusst).
+- [ ] **Community-Edition (kostenlos/Open Source)** ergänzen, sobald die Lizenzfrage geklärt ist.
 - [ ] Footer-„Kontakt" ist ein `mailto:` – ggf. eigene Kontaktseite/-formular.
+- [ ] Falls die Nachfrage steigt: Demo-Anfrage an echtes Backend/CRM anbinden, dann Datenschutz
+      Abschnitt 5 um Empfänger/AV-Vertrag/Speicherdauer konkretisieren.
+
+## Barrierefreiheit (Rest – nicht zwingend AA-Blocker)
+
+- [ ] Externe/Screenreader-Fachprüfung (aktuell nur Selbstbewertung).
+- [ ] Skip-Link („Zum Inhalt springen").
+- [ ] `prefers-reduced-motion` respektieren (dekorative Übergänge abschalten).
+- [ ] Gruppen-Labels (fieldset/role=group) für die Auswahlgruppen im Bedarfs-Check.
+- [ ] Optional: dedizierte `datenschutz@`-Adresse für die/den Datenschutzbeauftragte(n).
 
 ## SEO / AEO / Performance
 
-- [ ] Echtes, gebrandetes **OG-Bild** (1200×630) statt der aktuell kopierten Hero-JPG.
-- [ ] `sitemap.xml` bei neuen Seiten pflegen (aktuell manuell) – ggf. Build-Step generieren.
-- [ ] Core Web Vitals messen (Lighthouse); Hero-Bild ggf. als WebP/AVIF + `width`/`height`.
-- [ ] Optional: `theme-color` / Favicon-Set + `manifest.webmanifest` ergänzen.
+- [ ] Echtes, gebrandetes **OG-Bild** (1200×630) statt der kopierten Hero-JPG.
+- [ ] Core Web Vitals messen (Lighthouse); Hero-Bild ggf. WebP/AVIF + `width`/`height`.
+- [ ] `sitemap.xml` bei neuen Seiten pflegen – ggf. Build-Step generieren.
+- [ ] Optional: Favicon-Set + `manifest.webmanifest`.
 
 ## Sicherheit
 
-- [x] `security.txt` nach RFC 9116 unter `/.well-known/security.txt` angelegt.
-- [ ] **`Expires` am 2027-07-01 erneuern** (RFC-9116-Pflichtfeld, muss vor Ablauf aktualisiert werden).
-- [ ] Optional: dedizierte `security@`-Adresse, PGP-Key (`Encryption:`) und `Policy:`-URL ergänzen.
+- [ ] **`security.txt`: `Expires` am 2027-07-01 erneuern** (RFC-9116-Pflichtfeld).
+- [ ] Optional: dedizierte `security@`-Adresse, PGP-Key (`Encryption:`), `Policy:`-URL.
 
-## Infrastruktur / Remotes
-
-- [ ] **GitLab**-Remote hinzufügen (kommt später).
-- [ ] **Codeberg**-Remote hinzufügen (kommt später).
-- [ ] Deploy-Ziel festlegen (Nitro `node-server` ist portabel; passend zu „Hosting in DE").
-- [ ] CI (Lint + Build) einrichten.
+---
 
 ## Erledigt
 
-- [x] Von Lovable entkoppelt, Repo aufgeräumt, Historie gekappt (Initial-Commit).
-- [x] Schriften lokal selbst gehostet (kein Google-Fonts-CDN).
-- [x] Impressum, Datenschutz, Barrierefreiheit angelegt und im Footer verlinkt.
-- [x] Schema.org (Organization/WebSite/Product/FAQPage), Canonical/OG, robots/sitemap/llms.txt.
-- [x] README + Backlog.
+- [x] Von Lovable entkoppelt, Repo aufgeräumt, Historie gekappt, `origin` = GitHub-Fork.
+- [x] Schriften lokal self-hosted (Inter, Plus Jakarta Sans, OpenDyslexic – kein Google-CDN).
+- [x] Zielgruppe auf KMU verbreitert (Praxen, Kanzleien, Betriebe, Handel, Gastronomie).
+- [x] **Angebot = Schutz-Abo (Miete), keine Festpreise** (Option C); Produkt = Box mit
+      RADIUS + OPNsense + Mesh-Cockpit + App. Zusatz-Schutz (Security+, Multi-Site, Vor-Ort).
+      Bedarfs-Check statt Preisliste. Cloud als konfigurierbar kommuniziert.
+- [x] UWG-Aufräumung: „TÜV-geprüft"/„100 % DSGVO-konform"/„80 %/<600 €"/„lebenslange Garantie"
+      entschärft; sachlicher Cisco/Aruba-Vergleich; Router → „Firewall/Router (OPNsense-basiert)".
+- [x] Impressum (USt-IdNr. DE362600306, D-U-N-S 344660265, Maria Jackson §18 MStV), Datenschutz
+      (DPO Olga Mogilevskaya), Barrierefreiheit (Selbstbewertung + MLBF); alle TODOs raus.
+- [x] Widgets: Barrierefreiheits-Widget (Dyslexie/Kontrast/Schriftgröße), „Nach oben"-Button,
+      mailto-Demoformular, „powered by Novum Analytica".
+- [x] Schema.org (Organization/WebSite/Product/FAQPage, ohne Preise), Canonical/OG, robots,
+      sitemap, llms.txt, security.txt (RFC 9116).
+- [x] Statisches Prerendering + GitHub-Pages-Workflow (Deploy durch Fork-Beschränkung blockiert).
+- [x] README + Backlog aktualisiert.
