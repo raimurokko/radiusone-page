@@ -27,9 +27,9 @@ function Barrierefreiheit() {
     >
       <h2>Stand der Vereinbarkeit</h2>
       <p>
-        Diese Website ist mit den Erfolgskriterien der WCAG 2.1 Stufe AA{" "}
-        <strong>teilweise vereinbar</strong>. Die nachfolgend genannten Punkte werden laufend
-        geprüft und verbessert.
+        Grundlage ist eine <strong>Selbstbewertung (Stand Juli 2026)</strong>. Diese Website ist mit
+        den Erfolgskriterien der WCAG 2.1 Stufe AA <strong>weitgehend vereinbar</strong>. Die unter
+        „Nicht barrierefreie Inhalte" genannten Punkte werden laufend geprüft und verbessert.
       </p>
 
       <h2>Umgesetzte Maßnahmen</h2>
@@ -44,16 +44,30 @@ function Barrierefreiheit() {
           Sprachauszeichnung der Seite (lang=&quot;de&quot;) und beschriftete Navigationsbereiche
         </li>
         <li>Tastaturbedienbarkeit und sichtbarer Fokus</li>
-        <li>Responsives Layout und ausreichende Farbkontraste im Fließtext</li>
+        <li>ARIA-Landmarks (Kopf-, Haupt- und Fußbereich) und beschriftete Formularfelder</li>
+        <li>
+          Geprüfte Farbkontraste über den AA-Mindestwerten (Fließtext mindestens 6:1, interaktive
+          Elemente darüber)
+        </li>
       </ul>
 
       <h2>Nicht barrierefreie Inhalte</h2>
-      <p>
-        <strong>
-          [TODO: Nach einer vollständigen WCAG-Prüfung konkrete Ausnahmen und Einschränkungen
-          dokumentieren – z. B. einzelne Kontrastwerte, Formularhinweise oder Medieninhalte.]
-        </strong>
-      </p>
+      <p>Nach aktuellem Stand der Selbstbewertung sind folgende Punkte noch offen:</p>
+      <ul>
+        <li>
+          Eine vollständige Prüfung mit assistiven Technologien (Screenreader) und durch eine
+          externe Fachstelle steht noch aus.
+        </li>
+        <li>
+          Die Auswahlgruppen im Bedarfs-Check (Standorte, Betreuung) sind bedienbar, aber noch nicht
+          als Gruppe programmatisch mit ihrer Beschriftung verknüpft.
+        </li>
+        <li>
+          Bei der Nutzerpräferenz „Bewegung reduzieren" (prefers-reduced-motion) werden dekorative
+          Übergänge derzeit nicht abgeschaltet.
+        </li>
+        <li>Ein „Zum Inhalt springen"-Link (Skip-Link) ist noch nicht vorhanden.</li>
+      </ul>
 
       <h2>Feedback und Kontakt</h2>
       <p>
@@ -71,9 +85,26 @@ function Barrierefreiheit() {
       <h2>Durchsetzungsverfahren</h2>
       <p>
         Sollten wir Ihre Rückmeldung nicht zufriedenstellend bearbeiten, können Sie sich an die
-        zuständige Durchsetzungs- bzw. Marktüberwachungsstelle nach dem BFSG wenden.{" "}
-        <strong>[TODO: Zuständige Schlichtungs-/Durchsetzungsstelle konkret benennen.]</strong>
+        zuständige Marktüberwachungsstelle nach dem BFSG wenden. Zuständig ist bundesweit die
+        gemeinsame{" "}
+        <strong>
+          Marktüberwachungsstelle der Länder für die Barrierefreiheit von Produkten und
+          Dienstleistungen (MLBF)
+        </strong>
+        :
       </p>
+      <address>
+        Marktüberwachungsstelle der Länder für die Barrierefreiheit von Produkten und
+        Dienstleistungen (MLBF)
+        <br />
+        Carl-Miller-Str. 6, 39112 Magdeburg
+        <br />
+        E-Mail: <a href="mailto:kontakt@mlbf-barrierefrei.de">kontakt@mlbf-barrierefrei.de</a>
+        <br />
+        <a href="https://www.mlbf-barrierefrei.de" target="_blank" rel="noopener noreferrer">
+          www.mlbf-barrierefrei.de
+        </a>
+      </address>
     </LegalLayout>
   );
 }

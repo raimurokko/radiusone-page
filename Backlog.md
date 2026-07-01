@@ -7,15 +7,18 @@ Offene Punkte, priorisiert. Stand: 2026-07-01.
 - [x] **USt-IdNr.** (DE362600306) und **D-U-N-S** (344660265) im
       [Impressum](src/routes/impressum.tsx) eingetragen und in das Organization-Schema
       aufgenommen.
-- [ ] **Datenschutzbeauftragte(r)** benennen, falls bestellt ([datenschutz.tsx](src/routes/datenschutz.tsx)).
-- [ ] **Barrierefreiheit:** vollständige WCAG-2.1-AA-Prüfung; konkrete Ausnahmen und
-      zuständige Durchsetzungsstelle in [barrierefreiheit.tsx](src/routes/barrierefreiheit.tsx) ergänzen.
+- [x] **Datenschutzbeauftragte:** Olga Mogilevskaya im [datenschutz.tsx](src/routes/datenschutz.tsx)
+      eingetragen (Kontakt aktuell über Firmenadresse; ggf. dedizierte datenschutz@-Adresse ergänzen).
+- [x] **Barrierefreiheit:** Selbstbewertung (Juli 2026) durchgeführt, offene Punkte + zuständige
+      Stelle (MLBF, Magdeburg) in [barrierefreiheit.tsx](src/routes/barrierefreiheit.tsx) eingetragen;
+      Formularfelder beschriftet (aria-label). Kontraste AA-geprüft.
+- [ ] **Barrierefreiheit – Rest (nicht zwingend AA-Blocker):** externe/AT-Prüfung, Skip-Link,
+      prefers-reduced-motion, Gruppen-Labels (fieldset) im Bedarfs-Check.
+- [ ] **BFSG-Anwendbarkeit klären:** Greift das BFSG für diese (B2B-)Marketingseite überhaupt?
+      (Kleinstunternehmen-Ausnahme bei Dienstleistungen, B2C-/E-Commerce-Bezug) – vor Go-Live prüfen.
 - [x] TrustBar-Claims entschärft: „TÜV-geprüft" → „Entwickelt nach anerkannten
       Sicherheitsstandards"; „100 % DSGVO-konform (Art. 83-sicher)" → „DSGVO-konform
       gestaltet". „Hosting & Entwicklung in Deutschland" bleibt (bestätigt).
-- [x] „Lebenslange Hardware-Garantie" → „Erweiterte Hardware-Garantie" (Absolut-Claim entschärft).
-- [ ] **Konkrete Garantie-Laufzeit** (z.B. 24/36 Monate) im Hardware-Bundle eintragen,
-      sobald bekannt ([index.tsx](src/routes/index.tsx)).
 - [ ] Schlichtes „DSGVO-konform" im Hero ggf. an „DSGVO-konform gestaltet" angleichen.
 
 ## Angebot / Content

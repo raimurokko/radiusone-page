@@ -44,7 +44,8 @@ function Datenschutz() {
         E-Mail: <a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a>
       </address>
       <p>
-        <strong>[TODO: Datenschutzbeauftragte(r) benennen, falls bestellt.]</strong>
+        <strong>Datenschutzbeauftragte:</strong> Olga Mogilevskaya, erreichbar über die oben
+        genannten Kontaktdaten mit dem Stichwort „Datenschutz".
       </p>
 
       <h2>2. Hosting und Server-Logfiles</h2>

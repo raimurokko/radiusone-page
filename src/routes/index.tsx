@@ -161,13 +161,13 @@ function TrustBar() {
   ];
   return (
     <section className="border-y border-border bg-surface">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-6 py-8 md:grid-cols-3">
+      <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-5 px-6 py-8 sm:flex-row sm:gap-10 md:gap-14">
         {badges.map(({ icon: Icon, label }) => (
           <div
             key={label}
-            className="flex items-center justify-center gap-3 text-sm font-medium text-muted-foreground"
+            className="flex items-center gap-3 text-sm font-medium text-muted-foreground"
           >
-            <Icon className="h-5 w-5 text-primary" strokeWidth={1.75} />
+            <Icon className="h-5 w-5 flex-shrink-0 text-primary" strokeWidth={1.75} />
             {label}
           </div>
         ))}
@@ -385,7 +385,7 @@ function Sovereignty() {
           ))}
         </div>
 
-        <div className="mt-10 flex max-w-3xl items-start gap-4 rounded-2xl border border-primary/20 bg-primary-soft/40 p-5">
+        <div className="mx-auto mt-10 flex max-w-3xl items-start gap-4 rounded-2xl border border-primary/20 bg-primary-soft/40 p-5">
           <div className="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-primary/10 text-primary">
             <ShieldCheck className="h-5 w-5" />
           </div>
@@ -614,6 +614,7 @@ function FinalCTA() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Name & Unternehmen"
+                aria-label="Name und Unternehmen"
                 className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary"
               />
               <input
@@ -621,6 +622,7 @@ function FinalCTA() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="E-Mail Adresse"
+                aria-label="E-Mail-Adresse"
                 className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary"
               />
               <button
