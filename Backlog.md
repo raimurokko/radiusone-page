@@ -13,9 +13,10 @@ Offene Punkte, priorisiert. Stand: 2026-07-01.
 - [x] TrustBar-Claims entschärft: „TÜV-geprüft" → „Entwickelt nach anerkannten
       Sicherheitsstandards"; „100 % DSGVO-konform (Art. 83-sicher)" → „DSGVO-konform
       gestaltet". „Hosting & Entwicklung in Deutschland" bleibt (bestätigt).
-- [ ] Weitere Absolut-Claims prüfen: „Lebenslange Hardware-Garantie" (Preiskarte,
-      [index.tsx](src/routes/index.tsx)) – Garantieumfang/-dauer definieren oder umformulieren;
-      schlichtes „DSGVO-konform" im Hero ggf. an „DSGVO-konform gestaltet" angleichen.
+- [x] „Lebenslange Hardware-Garantie" → „Erweiterte Hardware-Garantie" (Absolut-Claim entschärft).
+- [ ] **Konkrete Garantie-Laufzeit** (z.B. 24/36 Monate) im Hardware-Bundle eintragen,
+      sobald bekannt ([index.tsx](src/routes/index.tsx)).
+- [ ] Schlichtes „DSGVO-konform" im Hero ggf. an „DSGVO-konform gestaltet" angleichen.
 
 ## Angebot / Content
 

@@ -441,7 +441,7 @@ function Pricing() {
             features={[
               "Router & Access Point vorinstalliert",
               "Sofort einsatzbereit",
-              "Lebenslange Hardware-Garantie",
+              "Erweiterte Hardware-Garantie",
               "Versand frei Haus innerhalb DE",
             ]}
           />
