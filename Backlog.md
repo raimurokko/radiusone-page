@@ -17,12 +17,14 @@ Offene Punkte, priorisiert. Stand: Juli 2026.
 
 ## Deployment / Infrastruktur
 
-- [ ] **GitHub Pages ist blockiert, weil das Repo ein Fork ist** (Pages/Actions bei Forks deaktiviert,
-      in den Settings nicht freischaltbar). Der Build-Job läuft in CI, nur der Deploy scheitert.
-      Optionen: (a) Fork zu eigenständigem Repo entkoppeln (GitHub-Support „detach" oder neues Repo),
-      (b) forkfähiger Host wie Cloudflare Pages / Netlify, (c) später Codeberg-/GitLab-Pages.
+- [x] **Live via GitHub Pages (Co-Repo):** Da das Haupt-Repo ein Fork ist (Pages dort gesperrt),
+      läuft der Deploy über das separate Public-Repo `radiusone-page` →
+      https://raimurokko.github.io/radiusone-page/ (Unterordner-Base-Pfad).
+      `origin` = `radiusone-by-novum` bleibt Haupt-Repo; Änderungen auf **beide** pushen.
+- [ ] **Custom Domain** (`radiusone.novumanalytica.com`) später: CNAME wieder aufnehmen,
+      Base-Pfad auf „/" (dann greift der env-Default), DNS-CNAME setzen. Aktuell bewusst weggelassen.
+- [ ] Co-Repo `radiusone-page` ist temporär – bei Umzug auf eigenständiges Haupt-Repo/Domain löschbar.
 - [ ] **GitLab**- und **Codeberg**-Remote hinzufügen (kommt später).
-- [ ] Deploy-Ziel final festlegen (aktuell: statisches Prerender-Output `.output/public`).
 
 ## Content / Feinschliff
 
