@@ -78,17 +78,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "RadiusOne – Plug & Play WLAN-Sicherheit für Praxen & Kanzleien" },
+      { title: "RadiusOne – Plug & Play WLAN-Sicherheit für kleine Unternehmen" },
       {
         name: "description",
         content:
-          "DSGVO-konformes WLAN für Kammerberufe. In 30 Minuten eingerichtet, individuelle Zugänge pro Person, ohne IT-Kenntnisse.",
+          "DSGVO-konformes WLAN für kleine Unternehmen – Praxen, Kanzleien, Betriebe, Handel und Gastronomie. In 30 Minuten eingerichtet, individuelle Zugänge pro Person, ohne IT-Kenntnisse.",
       },
       { property: "og:title", content: "RadiusOne – Ihr WLAN. Ihre Regeln." },
       {
         property: "og:description",
         content:
-          "Professionelle Netzwerk-Sicherheit für Praxen und Kanzleien. DSGVO-konform, in 30 Minuten eingerichtet.",
+          "Professionelle Netzwerk-Sicherheit für kleine Unternehmen – von der Praxis bis zum Café. DSGVO-konform, in 30 Minuten eingerichtet.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: SITE.name },

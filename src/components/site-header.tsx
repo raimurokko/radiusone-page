@@ -6,11 +6,16 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <a href="/" className="flex items-center gap-2" aria-label="RadiusOne – Startseite">
+        <a href="/" className="flex items-center gap-2.5" aria-label="RadiusOne – Startseite">
           <div className="grid h-8 w-8 place-items-center rounded-lg bg-primary text-primary-foreground">
             <Wifi className="h-4 w-4" />
           </div>
-          <span className="font-display text-lg font-bold tracking-tight">RadiusOne</span>
+          <span className="flex flex-col leading-none">
+            <span className="font-display text-lg font-bold tracking-tight">RadiusOne</span>
+            <span className="mt-0.5 text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
+              powered by Novum Analytica
+            </span>
+          </span>
         </a>
         <nav
           aria-label="Hauptnavigation"

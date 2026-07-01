@@ -28,17 +28,17 @@ import { SITE, COMPANY, canonical, productSchema, faqSchema, FAQ } from "@/lib/s
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "RadiusOne – Plug & Play WLAN-Sicherheit für Praxen & Kanzleien" },
+      { title: "RadiusOne – Plug & Play WLAN-Sicherheit für kleine Unternehmen" },
       {
         name: "description",
         content:
-          "DSGVO-konformes WLAN für Praxen, Kanzleien und Kammerberufe. In 30 Minuten eingerichtet, individuelle Zugänge pro Person, ohne IT-Kenntnisse.",
+          "DSGVO-konformes WLAN für kleine Unternehmen – Praxen, Kanzleien, Betriebe, Handel und Gastronomie. In 30 Minuten eingerichtet, individuelle Zugänge pro Person, ohne IT-Kenntnisse.",
       },
       { property: "og:title", content: "RadiusOne – Ihr WLAN. Ihre Regeln." },
       {
         property: "og:description",
         content:
-          "Professionelle Netzwerk-Sicherheit für Praxen und Kanzleien. DSGVO-konform, in 30 Minuten eingerichtet.",
+          "Professionelle Netzwerk-Sicherheit für kleine Unternehmen – von der Praxis bis zum Café. DSGVO-konform, in 30 Minuten eingerichtet.",
       },
       { property: "og:url", content: canonical("/") },
       { property: "og:image", content: SITE.url + SITE.ogImage },
@@ -92,9 +92,10 @@ function Hero() {
             <br />
             <span className="text-foreground">Ihre Regeln.</span>
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            Professionelle Netzwerk-Sicherheit für Praxen und Kanzleien. DSGVO-konform, in 30
-            Minuten eingerichtet und komplett ohne IT-Kenntnisse.
+          <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
+            Professionelle Netzwerk-Sicherheit für kleine Unternehmen – ob Praxis, Kanzlei, Betrieb,
+            Handel oder Café. DSGVO-konform, in 30 Minuten eingerichtet und komplett ohne
+            IT-Kenntnisse.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
@@ -176,20 +177,20 @@ function Problem() {
   const cards = [
     {
       icon: UserX,
-      title: "Mitarbeiter verlässt die Praxis",
+      title: "Mitarbeiter verlässt die Kanzlei",
       old: "Alter Weg: Passwort für alle ändern",
       new: "Mit RadiusOne: 1-Klick Einzel-Sperrung",
     },
     {
       icon: Wrench,
-      title: "Externe Dienstleister",
-      old: "Handwerker & Techniker kennen Ihr Passwort für immer",
+      title: "Handwerker & Dienstleister im Betrieb",
+      old: "Kennen Ihr WLAN-Passwort – für immer",
       new: "Mit RadiusOne: Zeitlich begrenzte Zugänge",
     },
     {
       icon: Users,
-      title: "Patienten im Wartebereich",
-      old: "Gäste nutzen das sensible Praxisnetzwerk",
+      title: "Gäste im Café oder Wartebereich",
+      old: "Surfen im selben Netz wie Ihre sensiblen Daten",
       new: "Mit RadiusOne: Strikt getrenntes Gäste-WLAN",
     },
   ];
@@ -203,8 +204,9 @@ function Problem() {
           <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-primary md:text-5xl">
             Ein Passwort für alle ist ein Sicherheitsrisiko.
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Jede dieser Situationen kennen Sie aus dem Praxisalltag – und jede ist ein DSGVO-Risiko.
+          <p className="mt-4 text-pretty text-lg text-muted-foreground">
+            Ob Praxis, Kanzlei, Handel oder Gastronomie – jede dieser Situationen kennen Sie aus dem
+            Arbeitsalltag, und jede ist ein DSGVO-Risiko.
           </p>
         </div>
 
@@ -284,7 +286,7 @@ function AppShowcase() {
     },
     {
       title: "Netze strikt trennen",
-      desc: "Gäste-WLAN und sensible Praxisdaten komplett isoliert – kein Übergriff möglich.",
+      desc: "Gäste-WLAN und sensible Firmendaten komplett isoliert – kein Übergriff möglich.",
     },
     {
       title: "Automatische DSGVO-Protokolle",
@@ -555,7 +557,7 @@ function FinalCTA() {
       "",
       "ich interessiere mich für eine unverbindliche, 15-minütige RadiusOne-Demo.",
       "",
-      `Name & Praxis/Kanzlei: ${name}`,
+      `Name & Unternehmen: ${name}`,
       `E-Mail für Rückfragen: ${email}`,
       `Wunschtermin: ${wunschtermin}`,
       "Telefon (optional): ",
@@ -589,7 +591,7 @@ function FinalCTA() {
               Live-Demo
             </span>
             <h2 className="mt-3 font-display text-4xl font-bold tracking-tight md:text-5xl">
-              Bereit für ein sicheres Praxis-WLAN?
+              Bereit für ein sicheres Firmen-WLAN?
             </h2>
             <p className="mt-5 max-w-md text-lg text-primary-foreground/75">
               Lassen Sie sich RadiusOne in einer 15-minütigen Live-Demo zeigen – vor Ort oder per
@@ -640,7 +642,7 @@ function FinalCTA() {
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                placeholder="Name & Praxis"
+                placeholder="Name & Unternehmen"
                 className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary"
               />
               <input

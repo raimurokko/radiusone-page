@@ -11,7 +11,7 @@ export const SITE = {
   themeColor: "#1f3d2b",
   tagline: "Ihr WLAN. Ihre Regeln.",
   description:
-    "DSGVO-konformes WLAN für Praxen, Kanzleien und Kammerberufe. In 30 Minuten eingerichtet, individuelle Zugänge pro Person, ohne IT-Kenntnisse.",
+    "DSGVO-konformes WLAN für kleine Unternehmen – Praxen, Kanzleien, Betriebe, Handel und Gastronomie. In 30 Minuten eingerichtet, individuelle Zugänge pro Person, ohne IT-Kenntnisse.",
   ogImage: "/og-image.jpg",
 } as const;
 
@@ -96,7 +96,7 @@ export function productSchema() {
     category: "Netzwerksicherheit / WLAN-Zugangsverwaltung",
     audience: {
       "@type": "Audience",
-      audienceType: "Praxen, Kanzleien und kleine Büros",
+      audienceType: "kleine Unternehmen: Praxen, Kanzleien, Betriebe, Handel und Gastronomie",
     },
     offers: [
       {
@@ -148,7 +148,7 @@ export function productSchema() {
 export const FAQ: { q: string; a: string }[] = [
   {
     q: "Was ist RadiusOne?",
-    a: "RadiusOne ist eine Plug-&-Play-Lösung für WLAN-Zugangsverwaltung. Jede Person und jedes Gerät erhält einen eigenen, individuell verwaltbaren Zugang statt eines gemeinsamen Passworts – speziell für Praxen, Kanzleien und kleine Büros.",
+    a: "RadiusOne ist eine Plug-&-Play-Lösung für WLAN-Zugangsverwaltung. Jede Person und jedes Gerät erhält einen eigenen, individuell verwaltbaren Zugang statt eines gemeinsamen Passworts – für kleine Unternehmen wie Praxen, Kanzleien, Betriebe, Handel und Gastronomie.",
   },
   {
     q: "Ist RadiusOne DSGVO-konform?",
@@ -172,7 +172,7 @@ export const FAQ: { q: string; a: string }[] = [
   },
   {
     q: "Für wen ist RadiusOne geeignet?",
-    a: "Für Arzt- und Zahnarztpraxen, Kanzleien, Steuerberatungen und kleine Büros – überall dort, wo sensible Daten und wechselnde Personen (Mitarbeiter, Dienstleister, Gäste) im selben WLAN aufeinandertreffen.",
+    a: "Für kleine und mittlere Unternehmen aller Branchen: Praxen, MVZ und Kliniken, Kanzleien und Steuerberatungen, Handwerks- und Handelsbetriebe sowie Cafés und Gastronomie – überall dort, wo sensible Daten und wechselnde Personen (Mitarbeiter, Dienstleister, Gäste) im selben WLAN aufeinandertreffen.",
   },
 ];
 
