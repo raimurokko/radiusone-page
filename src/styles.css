@@ -106,3 +106,51 @@
     letter-spacing: -0.02em;
   }
 }
+
+/* Prose-Styling für die Rechtsseiten (Impressum, Datenschutz, Barrierefreiheit). */
+.legal-prose {
+  color: var(--color-foreground);
+  line-height: 1.7;
+}
+.legal-prose h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-primary);
+}
+.legal-prose h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+.legal-prose p {
+  margin-bottom: 1rem;
+  color: var(--color-muted-foreground);
+}
+.legal-prose ul {
+  margin: 0 0 1rem 1.25rem;
+  list-style: disc;
+  color: var(--color-muted-foreground);
+}
+.legal-prose li {
+  margin-bottom: 0.35rem;
+}
+.legal-prose a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.legal-prose a:hover {
+  text-decoration: none;
+}
+.legal-prose strong {
+  color: var(--color-foreground);
+  font-weight: 600;
+}
+.legal-prose address {
+  font-style: normal;
+  margin-bottom: 1rem;
+  color: var(--color-muted-foreground);
+}

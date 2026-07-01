@@ -1,0 +1,32 @@
+# RadiusOne
+
+> RadiusOne ist eine Plug-&-Play-Lösung für DSGVO-konforme WLAN-Zugangsverwaltung
+> für Praxen, Kanzleien und kleine Büros. Statt eines gemeinsamen WLAN-Passworts
+> erhält jede Person einen individuellen, jederzeit entziehbaren Zugang. Marke der
+> Novum Analytica GmbH, Berlin. Hosting und Entwicklung in Deutschland.
+
+## Kernnutzen
+
+- Individuelle Zugänge pro Person statt geteiltem Passwort; Sperrung per 1 Klick.
+- Strikte Trennung von Gäste- und Arbeitsnetz (Patienten-/Mandantendaten geschützt).
+- Automatische Protokollierung (Nachweis: wer war wann in welchem Netzbereich) als
+  Beitrag zur DSGVO-Konformität.
+- Einrichtung in ca. 30 Minuten ohne IT-Kenntnisse, Verwaltung per Mobile-App.
+
+## Preise
+
+- Hardware Bundle (Plug & Play): 799 € einmalig (Router + Access Point vorinstalliert).
+- Software Business: 499 € / Jahr (Updates, Premium-Support aus DE, Mobile-App).
+
+## Seiten
+
+- [Startseite](https://radiusone.novumanalytica.com/): Produktübersicht, Ablauf, Preise, FAQ.
+- [Impressum](https://radiusone.novumanalytica.com/impressum)
+- [Datenschutz](https://radiusone.novumanalytica.com/datenschutz)
+- [Barrierefreiheit](https://radiusone.novumanalytica.com/barrierefreiheit)
+
+## Kontakt
+
+- Anbieter: Novum Analytica GmbH, Kurfürstendamm 194, 10707 Berlin
+- E-Mail: kontakt@novumanalytica.com · Telefon: +49 30 700159500
+- Hauptdomain: https://www.novumanalytica.com

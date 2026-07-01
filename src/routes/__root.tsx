@@ -10,6 +10,8 @@ import {
 import { type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import { JsonLd } from "@/components/json-ld";
+import { SITE, organizationSchema, webSiteSchema } from "@/lib/site";
 
 function NotFoundComponent() {
   return (
@@ -87,7 +89,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Professionelle Netzwerk-Sicherheit für Praxen und Kanzleien. DSGVO-konform, in 30 Minuten eingerichtet.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: SITE.name },
+      { property: "og:locale", content: SITE.locale },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "robots", content: "index, follow" },
+      { name: "theme-color", content: SITE.themeColor },
     ],
     links: [{ rel: "stylesheet", href: appCss }],
   }),
@@ -104,6 +110,7 @@ function RootShell({ children }: { children: ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        <JsonLd schema={[organizationSchema(), webSiteSchema()]} />
         {children}
         <Scripts />
       </body>

@@ -16,6 +16,10 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero-router.jpg";
 import appImg from "@/assets/app-mockup.jpg";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
+import { JsonLd } from "@/components/json-ld";
+import { SITE, canonical, productSchema, faqSchema, FAQ } from "@/lib/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -32,7 +36,11 @@ export const Route = createFileRoute("/")({
         content:
           "Professionelle Netzwerk-Sicherheit für Praxen und Kanzleien. DSGVO-konform, in 30 Minuten eingerichtet.",
       },
+      { property: "og:url", content: canonical("/") },
+      { property: "og:image", content: SITE.url + SITE.ogImage },
+      { name: "twitter:image", content: SITE.url + SITE.ogImage },
     ],
+    links: [{ rel: "canonical", href: canonical("/") }],
   }),
   component: LandingPage,
 });
@@ -40,7 +48,8 @@ export const Route = createFileRoute("/")({
 function LandingPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Header />
+      <JsonLd schema={[productSchema(), faqSchema()]} />
+      <SiteHeader />
       <main>
         <Hero />
         <TrustBar />
@@ -48,45 +57,11 @@ function LandingPage() {
         <HowItWorks />
         <AppShowcase />
         <Pricing />
+        <Faq />
         <FinalCTA />
       </main>
-      <Footer />
+      <SiteFooter />
     </div>
-  );
-}
-
-function Header() {
-  return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <a href="#" className="flex items-center gap-2">
-          <div className="grid h-8 w-8 place-items-center rounded-lg bg-primary text-primary-foreground">
-            <Wifi className="h-4 w-4" />
-          </div>
-          <span className="font-display text-lg font-bold tracking-tight">RadiusOne</span>
-        </a>
-        <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
-          <a href="#problem" className="hover:text-foreground transition-colors">
-            Problem
-          </a>
-          <a href="#how" className="hover:text-foreground transition-colors">
-            So funktioniert's
-          </a>
-          <a href="#app" className="hover:text-foreground transition-colors">
-            App
-          </a>
-          <a href="#pricing" className="hover:text-foreground transition-colors">
-            Preise
-          </a>
-        </nav>
-        <a
-          href="#demo"
-          className="inline-flex items-center gap-1.5 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground shadow-soft transition-transform hover:scale-[1.02]"
-        >
-          Demo buchen <ArrowRight className="h-3.5 w-3.5" />
-        </a>
-      </div>
-    </header>
   );
 }
 
@@ -572,29 +547,27 @@ function FinalCTA() {
   );
 }
 
-function Footer() {
+function Faq() {
   return (
-    <footer className="border-t border-border bg-surface">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-10 text-sm text-muted-foreground md:flex-row">
-        <div className="flex items-center gap-2">
-          <div className="grid h-7 w-7 place-items-center rounded-md bg-primary text-primary-foreground">
-            <Wifi className="h-3.5 w-3.5" />
-          </div>
-          <span className="font-display font-bold text-foreground">RadiusOne</span>
-          <span>© {new Date().getFullYear()}</span>
+    <section id="faq" className="border-t border-border py-24">
+      <div className="mx-auto max-w-3xl px-6">
+        <div className="text-center">
+          <span className="text-xs font-semibold uppercase tracking-[0.14em] text-accent-foreground/80">
+            Häufige Fragen
+          </span>
+          <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-primary md:text-5xl">
+            Antworten auf einen Blick
+          </h2>
         </div>
-        <div className="flex items-center gap-6">
-          <a href="#" className="hover:text-foreground">
-            Impressum
-          </a>
-          <a href="#" className="hover:text-foreground">
-            Datenschutz
-          </a>
-          <a href="#" className="hover:text-foreground">
-            Kontakt
-          </a>
-        </div>
+        <dl className="mt-12 divide-y divide-border">
+          {FAQ.map(({ q, a }) => (
+            <div key={q} className="py-6">
+              <dt className="font-display text-lg font-bold text-foreground">{q}</dt>
+              <dd className="mt-2 leading-relaxed text-muted-foreground">{a}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
-    </footer>
+    </section>
   );
 }
