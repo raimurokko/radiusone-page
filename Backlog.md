@@ -33,6 +33,12 @@ Offene Punkte, priorisiert. Stand: 2026-07-01.
 - [ ] Core Web Vitals messen (Lighthouse); Hero-Bild ggf. als WebP/AVIF + `width`/`height`.
 - [ ] Optional: `theme-color` / Favicon-Set + `manifest.webmanifest` ergänzen.
 
+## Sicherheit
+
+- [x] `security.txt` nach RFC 9116 unter `/.well-known/security.txt` angelegt.
+- [ ] **`Expires` am 2027-07-01 erneuern** (RFC-9116-Pflichtfeld, muss vor Ablauf aktualisiert werden).
+- [ ] Optional: dedizierte `security@`-Adresse, PGP-Key (`Encryption:`) und `Policy:`-URL ergänzen.
+
 ## Infrastruktur / Remotes
 
 - [ ] **GitLab**-Remote hinzufügen (kommt später).

@@ -1,0 +1,8 @@
+# RadiusOne – Security Policy (RFC 9116)
+# Novum Analytica GmbH
+
+Contact: mailto:kontakt@novumanalytica.com
+Contact: tel:+4930700159500
+Expires: 2027-07-01T00:00:00.000Z
+Preferred-Languages: de, en
+Canonical: https://radiusone.novumanalytica.com/.well-known/security.txt
