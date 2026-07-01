@@ -25,7 +25,8 @@ export const COMPANY = {
   managingDirectors: ["Benjamin Stein", "Rainhard Z. Bengez"],
   registerCourt: "Amtsgericht Charlottenburg",
   registerNumber: "HRB 265538 B",
-  vatId: "DE… (siehe Hauptdomain)",
+  vatId: "DE362600306",
+  duns: "344660265",
   phone: "+49 30 700159500",
   email: "kontakt@novumanalytica.com",
   homepage: "https://www.novumanalytica.com",
@@ -52,6 +53,8 @@ export function organizationSchema() {
     name: COMPANY.legalName,
     url: COMPANY.homepage,
     brand: { "@type": "Brand", name: SITE.name },
+    vatID: COMPANY.vatId,
+    duns: COMPANY.duns,
     address: {
       "@type": "PostalAddress",
       streetAddress: COMPANY.street,

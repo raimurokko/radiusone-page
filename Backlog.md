@@ -4,10 +4,9 @@ Offene Punkte, priorisiert. Stand: 2026-07-01.
 
 ## Rechtliches (Blocker vor Go-Live)
 
-- [ ] **USt-IdNr.** im [Impressum](src/routes/impressum.tsx) eintragen (aktuell `[TODO]`,
-      Verweis auf Hauptdomain). Von `novumanalytica.com/impressum` prüfen: die dort
-      gefundene Nummer `201/133/70123` wirkt wie eine Steuernummer, nicht wie eine
-      USt-IdNr. (`DE…`) – korrekten Wert klären.
+- [x] **USt-IdNr.** (DE362600306) und **D-U-N-S** (344660265) im
+      [Impressum](src/routes/impressum.tsx) eingetragen und in das Organization-Schema
+      aufgenommen.
 - [ ] **Datenschutzbeauftragte(r)** benennen, falls bestellt ([datenschutz.tsx](src/routes/datenschutz.tsx)).
 - [ ] **Barrierefreiheit:** vollständige WCAG-2.1-AA-Prüfung; konkrete Ausnahmen und
       zuständige Durchsetzungsstelle in [barrierefreiheit.tsx](src/routes/barrierefreiheit.tsx) ergänzen.

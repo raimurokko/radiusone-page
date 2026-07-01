@@ -63,13 +63,13 @@ function Impressum() {
 
       <h2>Umsatzsteuer-ID</h2>
       <p>
-        Die Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz entnehmen Sie bitte
-        dem{" "}
-        <a href={COMPANY.impressumUrl} target="_blank" rel="noopener noreferrer">
-          Impressum der Hauptdomain
-        </a>
-        . <strong>[TODO: USt-IdNr. hier direkt eintragen]</strong>
+        Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:
+        <br />
+        {COMPANY.vatId}
       </p>
+
+      <h2>D-U-N-S-Nummer</h2>
+      <p>{COMPANY.duns}</p>
 
       <h2>Inhaltlich verantwortlich gemäß § 18 Abs. 2 MStV</h2>
       <p>
