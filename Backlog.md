@@ -10,8 +10,12 @@ Offene Punkte, priorisiert. Stand: 2026-07-01.
 - [ ] **Datenschutzbeauftragte(r)** benennen, falls bestellt ([datenschutz.tsx](src/routes/datenschutz.tsx)).
 - [ ] **Barrierefreiheit:** vollständige WCAG-2.1-AA-Prüfung; konkrete Ausnahmen und
       zuständige Durchsetzungsstelle in [barrierefreiheit.tsx](src/routes/barrierefreiheit.tsx) ergänzen.
-- [ ] Prüfen, ob TrustBar-Claims („TÜV-geprüft", „100 % DSGVO-konform", „Art. 83-sicher")
-      belegbar sind – sonst wettbewerbsrechtliches Risiko.
+- [x] TrustBar-Claims entschärft: „TÜV-geprüft" → „Entwickelt nach anerkannten
+      Sicherheitsstandards"; „100 % DSGVO-konform (Art. 83-sicher)" → „DSGVO-konform
+      gestaltet". „Hosting & Entwicklung in Deutschland" bleibt (bestätigt).
+- [ ] Weitere Absolut-Claims prüfen: „Lebenslange Hardware-Garantie" (Preiskarte,
+      [index.tsx](src/routes/index.tsx)) – Garantieumfang/-dauer definieren oder umformulieren;
+      schlichtes „DSGVO-konform" im Hero ggf. an „DSGVO-konform gestaltet" angleichen.
 
 ## Funktionalität
 

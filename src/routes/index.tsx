@@ -147,8 +147,8 @@ function Hero() {
 function TrustBar() {
   const badges = [
     { icon: Flag, label: "Hosting & Entwicklung in Deutschland" },
-    { icon: ShieldCheck, label: "TÜV-geprüfter Sicherheitsstandard" },
-    { icon: Lock, label: "100% DSGVO-konform (Art. 83-sicher)" },
+    { icon: ShieldCheck, label: "Entwickelt nach anerkannten Sicherheitsstandards" },
+    { icon: Lock, label: "DSGVO-konform gestaltet" },
   ];
   return (
     <section className="border-y border-border bg-surface">
