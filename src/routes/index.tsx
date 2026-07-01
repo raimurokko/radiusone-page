@@ -413,14 +413,20 @@ function Pricing() {
             Enterprise-Sicherheit – kalkuliert für kleine Teams, nicht für Konzerne.
           </h2>
           <p className="mt-5 text-pretty text-lg text-muted-foreground">
-            RadiusOne nutzt dieselben offenen Sicherheitsstandards wie Cisco- und Aruba-Systeme –
-            WPA3-Enterprise, 802.1X und zertifikatsbasierte Authentifizierung (EAP-TLS). Nur ohne
-            Enterprise-Preisschild und ohne die Komplexität, die ein kleines Team nicht braucht.
+            RadiusOne bringt{" "}
+            <strong className="font-semibold text-foreground">
+              dieselbe Sicherheitstechnik, die Konzerne und Universitäten einsetzen
+            </strong>
+            , zu kleinen Unternehmen – WPA3-Enterprise, 802.1X und zertifikatsbasierte
+            Authentifizierung (EAP-TLS). Nur ohne Enterprise-Preisschild und ohne die Komplexität,
+            die ein kleines Team nicht braucht.
           </p>
-          <p className="mt-4 text-sm text-muted-foreground">
+          <p className="mt-4 text-pretty text-sm text-muted-foreground">
             Cisco ISE oder Aruba ClearPass starten bei 5.000 € und mehr (Softwarelizenz, ohne
-            Hardware und Integration) und rechnen sich oft erst ab rund 500 Nutzern. RadiusOne ist
-            für kleine Teams gebaut und individuell kalkuliert.
+            Hardware und Integration) und rechnen sich oft erst ab rund 500 Nutzern. RadiusOne
+            liefert dieselbe Technologieklasse zu{" "}
+            <strong className="font-semibold text-foreground">einem Bruchteil davon</strong> – für
+            kleine Teams gebaut und individuell kalkuliert.
           </p>
         </div>
 

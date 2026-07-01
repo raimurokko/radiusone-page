@@ -31,7 +31,7 @@ export function SiteHeader() {
             App
           </a>
           <a href="/#pricing" className="transition-colors hover:text-foreground">
-            Preise
+            Angebot
           </a>
         </nav>
         <a

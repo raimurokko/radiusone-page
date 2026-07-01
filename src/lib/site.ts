@@ -124,7 +124,7 @@ export const FAQ: { q: string; a: string }[] = [
   },
   {
     q: "Was kostet RadiusOne?",
-    a: "RadiusOne gibt es als monatliches Schutz-Abo: Die Box mieten Sie (inklusive Austausch und Upgrade), Software, Updates und Support sind enthalten. Einen fixen Preis zeigen wir bewusst nicht, weil sich die zugrunde liegenden Hardware-Kosten derzeit stark bewegen – so kalkulieren wir jedes Schutz-Paket individuell und fair. Zur Einordnung: Vergleichbare Enterprise-Lösungen wie Cisco ISE oder Aruba ClearPass starten bei 5.000 € und mehr. Eine unverbindliche Einschätzung erhalten Sie in zwei Minuten über den Bedarfs-Check auf der Startseite. Kauf statt Miete ist alternativ auf Anfrage möglich.",
+    a: "RadiusOne gibt es als monatliches Schutz-Abo: Die Box mieten Sie (inklusive Austausch und Upgrade), Software, Updates und Support sind enthalten. Einen fixen Preis zeigen wir bewusst nicht, weil sich die zugrunde liegenden Hardware-Kosten derzeit stark bewegen – so kalkulieren wir jedes Schutz-Paket individuell und fair. Zur Einordnung: Vergleichbare Enterprise-Lösungen wie Cisco ISE oder Aruba ClearPass starten bei 5.000 € und mehr – RadiusOne kostet nur einen Bruchteil davon und bringt dieselbe Sicherheits-Kerntechnik zu kleinen Unternehmen. Eine unverbindliche Einschätzung erhalten Sie in zwei Minuten über den Bedarfs-Check auf der Startseite. Kauf statt Miete ist alternativ auf Anfrage möglich.",
   },
   {
     q: "Läuft RadiusOne in der Cloud?",
