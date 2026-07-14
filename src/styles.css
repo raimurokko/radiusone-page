@@ -178,3 +178,8 @@ html.a11y-large-text {
 .high-contrast a:not([class]) {
   text-decoration: underline;
 }
+
+/* FAQ-Akkordeon: Chevron dreht sich, wenn das <details> offen ist. */
+details[open] .faq-chevron {
+  transform: rotate(180deg);
+}

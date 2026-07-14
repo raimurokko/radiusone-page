@@ -19,6 +19,7 @@ import {
   Scale,
   Building2,
   MapPin,
+  ChevronDown,
 } from "lucide-react";
 import heroImg from "@/assets/hero-router.jpg";
 import appImg from "@/assets/app-mockup.jpg";
@@ -661,14 +662,17 @@ function Faq() {
             Antworten auf einen Blick
           </h2>
         </div>
-        <dl className="mt-12 divide-y divide-border">
+        <div className="mt-12 divide-y divide-border">
           {FAQ.map(({ q, a }) => (
-            <div key={q} className="py-6">
-              <dt className="font-display text-lg font-bold text-foreground">{q}</dt>
-              <dd className="mt-2 leading-relaxed text-muted-foreground">{a}</dd>
-            </div>
+            <details key={q} className="group">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-display text-lg font-bold text-foreground [&::-webkit-details-marker]:hidden">
+                {q}
+                <ChevronDown className="faq-chevron h-5 w-5 flex-shrink-0 text-primary transition-transform duration-200" />
+              </summary>
+              <p className="pb-5 leading-relaxed text-muted-foreground">{a}</p>
+            </details>
           ))}
-        </dl>
+        </div>
       </div>
     </section>
   );
